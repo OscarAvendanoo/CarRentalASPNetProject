@@ -1,0 +1,35 @@
+﻿@model FribergCarRentals.ViewModel.LoginAndBookVM
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <h2>Your account has successfully been created</h2>
+
+            <!-- Display User Properties (Read-Only) -->
+            <form asp-action = "LoginBeforeBook" method="post">
+                @Html.AntiForgeryToken()
+
+                <!-- Display Email -->
+                <div class="form-group">
+                    <label class="form-label">Email</label>
+                    <p>@Model.Email</p>  <!-- Display email value -->
+                    @Html.HiddenFor(model => model.Email) <!-- Hidden field to send email to the next method -->
+                </div>
+
+                <!-- Display Password -->
+                <div class="form-group">
+                    <label class="form-label">Password</label>
+                    <p>@Model.Password</p>  <!-- Display password value -->
+                    @Html.HiddenFor(model => model.Password) <!-- Hidden field to send password to the next method -->
+                </div>
+
+                    @Html.HiddenFor(model => model.RememberMe) <!-- Hidden field to send RememberMe to the next method -->
+                    @Html.HiddenFor(model => model.CarId) <!-- Hidden field to send RememberMe to the next method -->
+               
+
+                <!-- Confirm Button -->
+                <button type="submit" class="btn btn-primary">Confirm</button>
+            </form>
+        </div>
+    </div>
+</div>

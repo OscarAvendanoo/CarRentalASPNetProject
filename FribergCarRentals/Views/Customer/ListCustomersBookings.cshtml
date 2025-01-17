@@ -1,0 +1,57 @@
+﻿@model IEnumerable<Booking>
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Start Date  <!-- Custom header text -->
+            </th>
+            <th>
+                End Date  <!-- Custom header text -->
+            </th>
+            <th>
+                Brand  <!-- Custom header text -->
+            </th>
+            <th>
+                Model  <!-- Custom header text -->
+            </th>
+            <th>
+                Year  <!-- Custom header text -->
+            </th>
+            <th hidden>
+                @Html.DisplayNameFor(model => model.Customer)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.StartDate)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.EndDate)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Car.Brand)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Car.Model)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Car.ModelYear)
+                </td>
+                <td hidden>
+                    @Html.DisplayFor(modelItem => item.Customer.Email)
+                </td>
+                <td>
+                    <a asp-action="Delete" asp-route-id="@item.BookingId">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

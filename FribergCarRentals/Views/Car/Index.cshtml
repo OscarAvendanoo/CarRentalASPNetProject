@@ -1,0 +1,38 @@
+﻿@model IEnumerable<FribergCarRentals.Models.Car>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    
+    <tbody>
+        <div class = "container mt-4">
+            <div class = "row">
+                @foreach (var item in Model)
+                {
+                 var defaultImage = "https://esquire-shop.co.za/images/noimg.png";
+                 var imageUrl = (item.carImages != null && item.carImages.Length > 0) ? item.carImages[0] : defaultImage;
+                 <div class = "col-md-3 mb-4">
+                     <div class="card" style="width: 18rem;">
+                         <img class="card-img-top" src="@imageUrl" alt="Card image cap">
+                         <div class="card-body">
+                            <h5 class="card-title">@item.Brand @item.Model</h5>
+                            <hr>
+                            <p class="card-text d-flex justify-content-between">Year: <span>@item.ModelYear</span></p>
+                            <p class="card-text d-flex justify-content-between">Is Available: <span>@(item.IsAvailable ? "Yes" : "No")</span></p>
+                            <p class="card-text d-flex justify-content-between">Price: <span style="font-weight: bold;">@item.PricePerDay:-/day</span></p>
+                            <hr>
+                            <a href="#" class="btn btn-secondary btn-lg w-100 mb-2">Details</a>
+                            <a href="#" class="btn btn-primary btn-lg w-100">Rent Now</a>
+                         </div>
+                    </div>
+                </div>
+                }
+            </div>
+        </div>

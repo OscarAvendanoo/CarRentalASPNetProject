@@ -1,0 +1,29 @@
+﻿@model FribergCarRentals.ViewModel.BookingConfirmationVM
+
+<h1>Confirm Your Booking</h1>
+<p>Car: @Model.Brand (@Model.Brand)</p>
+<p>Price per day: @Model.PricePerDay</p>
+<img src="@Model.ImageUrl" alt="@Model.Brand" class="w-25 h-25" />
+
+<form asp-controller="Booking" asp-action="CompleteBooking" method="post">
+    @Html.AntiForgeryToken()
+    <input type="hidden" name="CarId" value="@Model.CarId" />
+    <input type="hidden" name="Brand" value="@Model.Brand" />
+    <input type="hidden" name="Model" value="@Model.PricePerDay" />
+    <input type="hidden" name="ImageUrl" value="@Model.ImageUrl" />
+    
+
+    <div class="form-group">
+        <label for="StartDate">Start Date</label>
+        <input asp-for="StartDate" class="form-control" type="date" />
+        @Html.ValidationMessageFor(model => model.StartDate, "", new { @class = "text-danger" })
+    </div>
+
+    <div class="form-group">
+        <label for="EndDate">End Date</label>
+        <input asp-for="EndDate" class="form-control" type="date" />
+        @Html.ValidationMessageFor(model => model.EndDate, "", new { @class = "text-danger" })
+    </div>
+
+    <button type="submit" class="btn btn-primary">Confirm Booking</button>
+</form>

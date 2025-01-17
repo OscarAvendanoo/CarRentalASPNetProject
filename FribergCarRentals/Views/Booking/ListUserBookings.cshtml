@@ -1,0 +1,83 @@
+﻿@model IEnumerable<FribergCarRentals.Models.Booking>
+
+@{
+    ViewData["Title"] = "ListUserBookings";
+
+
+
+    // Delar upp bokningarna i olika object baserat på dagens datum och bokningarnas start date
+
+    var today = DateTime.Today;
+
+    var futureBookings = Model.Where(b => b.StartDate >= today).OrderBy(b => b.StartDate);
+
+    var pastBookings = Model.Where(b => b.StartDate < today).OrderByDescending(b => b.StartDate);
+}
+
+<h1>ListUserBookings</h1>
+
+<h2>Upcoming Bookings</h2>
+<table class="table">
+    <thead>
+        <tr>
+            <th>@Html.DisplayNameFor(model => model.StartDate)</th>
+            <th>@Html.DisplayNameFor(model => model.EndDate)</th>
+            <th>@Html.DisplayNameFor(model => model.Car)</th>
+            <th>@Html.DisplayNameFor(Model => Model.Car.ModelYear)</th>
+            <th>@Html.DisplayNameFor(model => model.Customer)</th>
+            <th>E-mail</th>
+            <th>@Html.DisplayNameFor(model => model.TotalCost)</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in futureBookings)
+
+        {
+            <tr>
+                <td>@item.StartDate.ToShortDateString()</td>
+                <td>@item.EndDate.ToShortDateString()</td>
+                <td>@($"{item.Car.Brand} {item.Car.Model}")</td>
+                <td>@item.Car.ModelYear</td>
+                <td>@($"{item.Customer.FirstName} {item.Customer.LastName}")</td>
+                <td>@item.Customer.Email</td>
+                <td>@($"{item.TotalCost} $")</td>
+                <td> 
+                    <a asp-action="Details" asp-route-id="@item.BookingId">Details</a> |
+                    <a asp-action="UnbookBooking" asp-route-bookingId="@item.BookingId">Unbook</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<h2>Past Bookings</h2>
+<table class="table">
+    <thead>
+        <tr>
+            <th>@Html.DisplayNameFor(model => model.StartDate)</th>
+            <th>@Html.DisplayNameFor(model => model.EndDate)</th>
+            <th>@Html.DisplayNameFor(model => model.Car)</th>
+            <th>@Html.DisplayNameFor(Model => Model.Car.ModelYear)</th>
+            <th>@Html.DisplayNameFor(model => model.Customer)</th>
+            <th>E-mail</th>
+            <th>@Html.DisplayNameFor(model => model.TotalCost)</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in pastBookings)
+
+        {
+            <tr>
+                <td>@item.StartDate.ToShortDateString()</td>
+                <td>@item.EndDate.ToShortDateString()</td>
+                <td>@($"{item.Car.Brand} {item.Car.Model}")</td>
+                <td>@item.Car.ModelYear</td>
+                <td>@($"{item.Customer.FirstName} {item.Customer.LastName}")</td>
+                <td>@item.Customer?.Email</td>
+                <td>@($"{item.TotalCost} $")</td>
+            </tr>
+        }
+    </tbody>
+</table>

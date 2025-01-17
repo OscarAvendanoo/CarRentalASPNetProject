@@ -1,0 +1,17 @@
+﻿@model FribergCarRentals.ViewModel.BookingSummaryVm
+
+<h1>Booking Summary</h1>
+
+<div class="card">
+    <div class="card-body">
+        <h4 class="card-title">Thank you for your booking!</h4>
+        <p class="card-text"><strong>Booking ID:</strong> @Model.BookingId</p>
+        <p class="card-text"><strong>Car:</strong> @Model.Brand (@Model.Model)</p>
+        <p class="card-text"><strong>Rental Period:</strong> @Model.StartDate.ToString("yyyy-MM-dd") - @Model.EndDate.ToString("yyyy-MM-dd")</p>
+        <p class="card-text"><strong>Total Price:</strong> @Model.TotalPrice.ToString("C")</p>
+        <p class="card-text"><strong>Customer Name:</strong> @Model.CustomerName</p>
+        <p class="card-text"><strong>Customer Email:</strong> @Model.CustomerEmail</p>
+    </div>
+</div>
+
+<a href="@Url.Action("Index", "Home")" class="btn btn-primary mt-3">Back to Home</a>
