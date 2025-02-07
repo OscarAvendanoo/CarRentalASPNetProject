@@ -10,9 +10,14 @@
 </head>
 <body>
     <header>
+        <div class="container">
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
             <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">FribergCarRentals</a>
+                
+                <a class="navbar-brand" href="#">
+                    <img src="~/images/companyLogo.png" class="navbarLogo" width="50" height="50" alt="">
+                </a>
+                <a class="navbar-brand CompanyName ms-5" asp-area="" asp-controller="Home" asp-action="Index">Friberg car rentals</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -28,46 +33,55 @@
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
                         </li>
-                        <!-- Conditional links based on user authentication and role -->
+
+                        <!-- navigationslänkar för inloggade användare-->
                         @if (User.Identity.IsAuthenticated)
                         {
+                            <!-- navigationslänkar för Admin-->
                             if (User.IsInRole("Admin"))
                             {
-                                <!-- Admin-specific links -->
+                            
                                 <li class="nav-item">
-                                    <a class="nav-link text-dark" asp-area="" asp-controller="Admin" asp-action="Dashboard">Admin Dashboard</a>
+                                    <a class="nav-link text-dark" asp-area="" asp-controller="Customer" asp-action="ListAllCustomers">Manage Users</a>
                                 </li>
+                              
+                              @*   <li class="nav-item">
+                                    <a class="nav-link text-dark" asp-area="" asp-controller="Admin" asp-action="ListAllAdmins">Manage Admins</a>
+                                </li> *@
                             }
                             else
                             {
-                                <!-- Regular user-specific links -->
-                                <li class="nav-item">
-                                    <a class="nav-link text-dark" asp-area="" asp-controller="User" asp-action="Profile">My Profile</a>
-                                </li>
+                               
                                 <li class="nav-item">
                                     <a class="nav-link text-dark" asp-area="" asp-controller="Booking" asp-action="ListUserBookings">My Bookings</a>
                                 </li>
                             }
 
-                            <!-- Logout link -->
-                            <li class="nav-item">
-                                <a class="nav-link text-white bg-success" asp-area="" asp-controller="User" asp-action="Logout">Log out</a>
+                            <!-- Logga ut länk -->
+                            <div class="ms-auto d-flex">
+                             <li class ="nav-item " style="display: flex; justify-content: center; align-items: center; width: 7em; border-radius: 1rem;">
+                                 <a class="nav-link text-white bg-primary text-center" style="border-radius: 0.5rem; width: 100%; padding: 0.5em 1em;" asp-area="" asp-controller="Home" asp-action="Logout">Log out</a>
                             </li>
+                            </div>
                         }
                         else
                         {
-                            <!-- Links for unauthenticated users -->
-                            <li class="nav-item">
-                                <a class="nav-link text-white bg-success" asp-area="" asp-controller="User" asp-action="Login">Log in</a>
+                        <!-- navigationslänkar för ej inloggade användare-->
+                         <div class="ms-auto d-flex">
+                            <li class="nav-item me-2">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Customer" asp-action="Register">Register</a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link text-dark" asp-area="" asp-controller="User" asp-action="Register">Register</a>
+                            <li class="nav-item " style="display: flex; justify-content: center; align-items: center; width: 5em; border-radius: 1rem;">
+                                <a class="nav-link text-white bg-success text-center" style="border-radius: 0.5rem; width: 100%; padding: 0.5em 1em;" asp-area="" asp-controller="Customer" asp-action="Login">Log in</a>
                             </li>
+                        </div>
                         }
                     </ul>
                 </div>
+                
             </div>
         </nav>
+        </div>
     </header>
     <div class="container">
         <main role="main" class="pb-3">

@@ -1,35 +1,40 @@
 ﻿@model FribergCarRentals.ViewModel.LoginAndBookVM
 
-<div class="container">
-    <div class="row">
-        <div class="col-md-6">
-            <h2>Your account has successfully been created</h2>
 
-            <!-- Display User Properties (Read-Only) -->
-            <form asp-action = "LoginBeforeBook" method="post">
-                @Html.AntiForgeryToken()
-
-                <!-- Display Email -->
-                <div class="form-group">
-                    <label class="form-label">Email</label>
-                    <p>@Model.Email</p>  <!-- Display email value -->
-                    @Html.HiddenFor(model => model.Email) <!-- Hidden field to send email to the next method -->
-                </div>
-
-                <!-- Display Password -->
-                <div class="form-group">
-                    <label class="form-label">Password</label>
-                    <p>@Model.Password</p>  <!-- Display password value -->
-                    @Html.HiddenFor(model => model.Password) <!-- Hidden field to send password to the next method -->
-                </div>
-
-                    @Html.HiddenFor(model => model.RememberMe) <!-- Hidden field to send RememberMe to the next method -->
-                    @Html.HiddenFor(model => model.CarId) <!-- Hidden field to send RememberMe to the next method -->
-               
-
-                <!-- Confirm Button -->
-                <button type="submit" class="btn btn-primary">Confirm</button>
-            </form>
+<div class="container vh-100 d-flex justify-content-center align-items-center">
+    <div class="col-md-6">
+        <div class="text-center mb-3">
+            <h4 class="mb-3 fw-bold">Your account has successfully been created.</h4>
         </div>
+        <div class="mb-3 text-center">
+            <img src="/images/success.png" alt="Success Symbol" class="img-fluid my-3" style="max-height: 150px;">
+        </div>
+        
+        <form asp-action="LoginBeforeBook" method="post">
+            @Html.AntiForgeryToken()
+            <div class="bg-light p-4 rounded shadow mb-4">
+                <!-- Visa email -->
+                <div class="mb-3">
+                    <label class="form-label fw-bold">Email:</label>
+                    <p class="form-control-plaintext">@Model.Email</p>
+                    @Html.HiddenFor(model => model.Email)
+                </div>
+
+                <!-- Via lösenord -->
+                <div class="mb-3">
+                    <label class="form-label fw-bold">Password:</label>
+                    <p class="form-control-plaintext">@Model.Password</p>
+                    @Html.HiddenFor(model => model.Password)
+                </div>
+            </div>
+            @Html.HiddenFor(model => model.CarId)
+            @Html.HiddenFor(model => model.RememberMe)
+
+            <!-- Submit knapp -->
+            <div class="text-center">
+                <button type="submit" class="btn btn-success w-25">Continue booking</button>
+            </div>
+        </form>
     </div>
+
 </div>

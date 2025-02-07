@@ -10,6 +10,7 @@
         public decimal TotalPrice { get; set; }
         public string CustomerName { get; set; }
         public string CustomerEmail { get; set; }
+        public string ImageUrl { get; set; }    
     
     }
 }

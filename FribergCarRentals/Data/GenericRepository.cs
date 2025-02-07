@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using FribergCarRentals.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace FribergCarRentals.Data
 {
@@ -10,40 +11,45 @@ namespace FribergCarRentals.Data
         {
             _context = context;
         }
-        public T Add(T entity)
+
+        public async Task<T> AddAsync(T entity)
         {
-            var addedEntity = _context.Add(entity).Entity;
-            _context.SaveChanges();
-            return entity;
+            var addedEntity = await _context.AddAsync(entity);
+            await _context.SaveChangesAsync();
+            return addedEntity.Entity;
         }
 
-        public void Delete(T entity)
+        public async Task DeleteAsync(T entity)
         {
-            var deletedEntity = _context.Remove(entity).Entity;
-            _context.SaveChanges();
-       
+            _context.Remove(entity);
+            await _context.SaveChangesAsync();
         }
 
-        public IEnumerable<T> GetAll()
+        public async Task<IEnumerable<T>> GetAllAsync()
         {
-            return _context.Set<T>().ToList();
+            return await _context.Set<T>().ToListAsync();
         }
 
-        public T GetbyID(int id)
+        public async Task<T> GetByIDAsync(int id)
         {
-            return _context.Find<T>(id);
-            
+            return await _context.FindAsync<T>(id);
         }
 
-        public void SaveChanges()
+        public async Task SaveChanges()
         {
-            throw new NotImplementedException();
+            await _context.SaveChangesAsync();
         }
 
-        public T Update(T entity)
+        public async Task<T> UpdateAsync(T entity)
         {
             var updatedEntity = _context.Update(entity).Entity;
+            await _context.SaveChangesAsync();
             return updatedEntity;
+        }
+
+        public async Task AttachEntity(T entity)
+        {
+            await Task.Run(() => _context.Attach(entity));
         }
     }
 }

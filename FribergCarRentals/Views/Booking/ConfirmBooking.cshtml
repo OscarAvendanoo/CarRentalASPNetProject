@@ -1,9 +1,52 @@
 ﻿@model FribergCarRentals.ViewModel.BookingConfirmationVM
 
-<h1>Confirm Your Booking</h1>
-<p>Car: @Model.Brand (@Model.Brand)</p>
-<p>Price per day: @Model.PricePerDay</p>
-<img src="@Model.ImageUrl" alt="@Model.Brand" class="w-25 h-25" />
+<h1 class="text-center fs-1">Complete your booking</h1>
+
+<div class="container my-4">
+    <!-- Card för booking details -->
+    <div class="card">
+        <div class="card-header">
+            <h4 class="fs-3">Car Details</h4>
+        </div>
+        <div class="card-body">
+            <div class="row">
+                <div class="col-md-6">
+                    <dl class="row">
+                        <dt class="col-sm-4 fs-5 fw-bold">
+                            Brand:
+                        </dt>
+                        <dd class="col-sm-8 fs-4">
+                            @Html.DisplayFor(model => model.Brand)
+                        </dd>
+                        <dt class="col-sm-4 fs-5 fw-bold">
+                            Model:
+                        </dt>
+                        <dd class="col-sm-8 fs-4">
+                            @Html.DisplayFor(model => model.Model)
+                        </dd>
+                        <dt class="col-sm-4 fs-5 fw-bold">
+                            Model year:
+                        </dt>
+                        <dd class="col-sm-8 fs-4">
+                            @Html.DisplayFor(model => model.ModelYear)
+                        </dd>
+                        <dt class="col-sm-4 fs-5 fw-bold">
+                            Price per day:
+                        </dt>
+                        <dd class="col-sm-8 fs-4">
+                            $@Html.DisplayFor(model => model.PricePerDay)
+                        </dd>
+                    </dl>
+                </div>
+                <!-- bild höger sida -->
+                <div class="col-md-6">
+                    <img src="@Model.ImageUrl" alt="Booking Image" class="img-fluid w-100" />
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<h4 class=" ms-3 mb-3 mt-3">Please choose the dates for your booking:</h4>
 
 <form asp-controller="Booking" asp-action="CompleteBooking" method="post">
     @Html.AntiForgeryToken()
@@ -11,19 +54,25 @@
     <input type="hidden" name="Brand" value="@Model.Brand" />
     <input type="hidden" name="Model" value="@Model.PricePerDay" />
     <input type="hidden" name="ImageUrl" value="@Model.ImageUrl" />
+    <input type="hidden" name="ModelYear" value="@Model.ModelYear"/>
     
+    <!-- Date pickers här nedan -->
 
-    <div class="form-group">
+    <div class="form-group ms-3 mb-3 w-25">
         <label for="StartDate">Start Date</label>
-        <input asp-for="StartDate" class="form-control" type="date" />
+        <input asp-for="StartDate" class="form-control" type="date" value="@DateTime.Now"/>
         @Html.ValidationMessageFor(model => model.StartDate, "", new { @class = "text-danger" })
     </div>
 
-    <div class="form-group">
+    <div class="form-group ms-3 mb-3 w-25">
         <label for="EndDate">End Date</label>
-        <input asp-for="EndDate" class="form-control" type="date" />
+        <input asp-for="EndDate" class="form-control" type="date" value="@DateTime.Now" />
         @Html.ValidationMessageFor(model => model.EndDate, "", new { @class = "text-danger" })
     </div>
 
-    <button type="submit" class="btn btn-primary">Confirm Booking</button>
+    <button type="submit" class="btn btn-primary ms-3 mt-3">Confirm Booking</button>
 </form>
+<div class="validation-summary ms-3">
+    @Html.ValidationSummary(false, "", new { @class = "text-danger" })
+</div>
+

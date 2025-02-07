@@ -14,6 +14,8 @@ namespace FribergCarRentals
     {
         public static void Main(string[] args)
         {
+            
+
             var builder = WebApplication.CreateBuilder(args);
 
             // Add services to the container.
@@ -21,9 +23,10 @@ namespace FribergCarRentals
             builder.Services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(@"Data Source = (localdb)\MSSQLLocalDB; Initial Catalog = FribergCarRentals; Integrated Security = True; Connect Timeout = 30; Encrypt = False; Trust Server Certificate = False; Application Intent = ReadWrite; Multi Subnet Failover = False"));
             builder.Services.AddTransient<IRepository<Car>, CarRepository>();
             builder.Services.AddTransient<IRepository<UserRole>, UserRoleRepository>();
-            builder.Services.AddTransient<CustomerRepository>();
-            builder.Services.AddTransient<BookingRepository,BookingRepository>();
-            builder.Services.AddTransient<AdminRepository>();
+            builder.Services.AddTransient<ICustomerRepository,CustomerRepository>();
+            builder.Services.AddTransient<IBookingRepository,BookingRepository>();
+            builder.Services.AddTransient<IAdminRepository, AdminRepository>();
+ 
             builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme).AddCookie(CookieAuthenticationDefaults.AuthenticationScheme, options =>
             {
                 options.LoginPath = "/User/Login";

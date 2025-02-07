@@ -6,7 +6,7 @@
 <h1 class="text-center fs-1">Are you sure you want to unbook this booking?</h1>
 
 <div class="container my-4">
-    <!-- Card for booking details -->
+    <!-- Card för booking details -->
     <div class="card">
         <div class="card-header">
             <h4 class="fs-3">Booking Details</h4>
@@ -16,38 +16,38 @@
                 <div class="col-md-6">
                     <dl class="row">
                         <dt class="col-sm-4 fs-5 fw-bold">
-                            @Html.DisplayNameFor(model => model.BookingId)
+                            Booking ID:
                         </dt>
                         <dd class="col-sm-8 fs-4">
                             @Html.DisplayFor(model => model.BookingId)
                         </dd>
                         <dt class="col-sm-4 fs-5 fw-bold">
-                            @Html.DisplayNameFor(model => model.Car)
+                            Car:
                         </dt>
                         <dd class="col-sm-8 fs-4">
                             @($"{Model.Car.Brand} {Model.Car.Model}")
                         </dd>
                         <dt class="col-sm-4 fs-5 fw-bold">
-                            @Html.DisplayNameFor(model => model.StartDate)
+                            Start date:
                         </dt>
                         <dd class="col-sm-8 fs-4">
                             @Html.DisplayFor(model => model.StartDate)
                         </dd>
                         <dt class="col-sm-4 fs-5 fw-bold">
-                            @Html.DisplayNameFor(model => model.EndDate)
+                            End date:
                         </dt>
                         <dd class="col-sm-8 fs-4">
                             @Html.DisplayFor(model => model.EndDate)
                         </dd>
                         <dt class="col-sm-4 fs-5 fw-bold">
-                            @Html.DisplayNameFor(model => model.TotalCost)
+                            Total cost:
                         </dt>
                         <dd class="col-sm-8 fs-4">
                             @Html.DisplayFor(model => model.TotalCost) $
                         </dd>
                     </dl>
                 </div>
-                <!-- Right side image -->
+                <!-- bild höger sida -->
                 <div class="col-md-6">
                     <img src="@Model.Car.carImages[0]" alt="Booking Image" class="img-fluid w-100" />
                 </div>

@@ -1,0 +1,57 @@
+﻿@model FribergCarRentals.ViewModel.BookingEditViewModel
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+
+<div class="d-flex justify-content-center align-items-center" style="min-height: 90vh; margin-top: -50px;">
+    <div class="card shadow-sm p-4 bg-light" style="max-width: 500px; width: 100%;">
+        <div class="card-body">
+            <div class="d-flex justify-content-center align-items-center mb-3">
+                <h2 class="text-center">Enter Booking Details</h2>
+            </div>
+
+            <!-- Formulär för att ändra en bokining -->
+
+            <form asp-action="Edit" method="post">
+                @Html.AntiForgeryToken()
+                @Html.HiddenFor(model => model.BookingId)
+
+                <div class="mb-3">
+                    <label class="form-label" for="CarIdInput">Car ID:</label>
+                    @Html.TextBoxFor(model => model.CarId, new { @class = "form-control", id = "CarIdInput" })
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label" for="CustomerIdInput">Customer ID:</label>
+                    @Html.TextBoxFor(model => model.CustomerId, new { @class = "form-control", id = "CustomerIdInput" })
+                </div>
+
+                <div class="mb-3">
+                    <label for="StartDate">Start Date</label>
+                    <input asp-for="StartDate" class="form-control" type="date" value="@DateTime.Now" />
+                    @Html.ValidationMessageFor(model => model.StartDate, "", new { @class = "text-danger" })
+                </div>
+
+                <div class="mb-3">
+                    <label for="EndDate">End Date</label>
+                    <input asp-for="EndDate" class="form-control" type="date" value="@DateTime.Now" />
+                    @Html.ValidationMessageFor(model => model.EndDate, "", new { @class = "text-danger" })
+                </div>
+
+                <div class="d-flex flex-column justify-content-center align-items-center mt-3">
+                    <a asp-controller="Customer" asp-action="ListAllCustomers" class="btn btn-secondary mb-2">View customers</a>
+                    <button type="submit" class="btn btn-primary btn-block">Update booking</button>
+                </div>
+            </form>
+            @if (!ViewData.ModelState.IsValid && ViewData.ModelState.ErrorCount > 0)
+            {
+                <div class="alert alert-danger mt-2">
+                    @Html.ValidationSummary(false, "", new { @class = "text-danger" })
+                </div>
+            }
+        </div>
+    </div>
+</div>

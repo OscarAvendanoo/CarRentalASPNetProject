@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace FribergCarRentals.Data
 {
-    public class BookingRepository : GenericRepository<Booking>
+    public class BookingRepository : GenericRepository<Booking>, IBookingRepository
     {
         private readonly ApplicationDbContext _context;
 
@@ -11,15 +11,15 @@ namespace FribergCarRentals.Data
         {
             _context = applicationDbContext;
         }
-        public IEnumerable<Booking> GetBookingByUserID(int Id)
+        public async Task<IEnumerable<Booking>> GetBookingByUserIDAsync(int Id)
         {
-            var bookings = _context.Bookings.Where(b => b.CustomerId == Id).Include(b => b.Car).Include(b => b.Customer).ToList();
-            return bookings;
+            return await _context.Bookings.Where(b => b.CustomerId == Id).Include(b => b.Car).Include(b => b.Customer).ToListAsync();
+           
         }
-        public Booking GetBookingByIdIncludeCustomerAndCar(int id)
+        public async Task<Booking> GetBookingByIdIncludeCustomerAndCarAsync(int id)
         {
-            var booking = _context.Bookings.Where(b => b.BookingId == id).Include(b => b.Car).Include(b => b.Customer).FirstOrDefault();
-            return booking;
+            return await _context.Bookings.Where(b => b.BookingId == id).Include(b => b.Car).Include(b => b.Customer).FirstOrDefaultAsync();
+           
         }
     }
 }

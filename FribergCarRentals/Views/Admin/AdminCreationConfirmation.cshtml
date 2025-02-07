@@ -1,0 +1,48 @@
+﻿@model Admin
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <h2>The new Admin was successfully added to the database:</h2>
+
+                 <!-- Display ID -->
+                <div class="form-group">
+                    <label class="form-label">Admin Id:</label>
+                    <p>@Model.AdminId</p>  <!-- Display email value -->
+
+                </div>
+                <!-- Display First Name -->
+                <div class="form-group">
+                    <label class="form-label">First name:</label>
+                    <p>@Model.FirstName</p>  <!-- Display email value -->
+                   
+                </div>
+
+                <!-- Display Last Name-->
+                <div class="form-group">
+                    <label class="form-label">Last name:</label>
+                    <p>@Model.LastName</p>  <!-- Display password value -->  
+                </div>
+                <!-- Display Email -->
+                <div class="form-group">
+                    <label class="form-label">Email:</label>
+                    <p>@Model.Email</p>  <!-- Display password value -->
+                </div>
+                <!-- Display Password -->
+                <div class="form-group">
+                    <label class="form-label">Password:</label>
+                    <p>@Model.Email</p>  <!-- Display password value -->
+
+                </div>
+
+             
+                <!-- Back to home button -->
+                <a href="@Url.Action("Index", "Home")" class="btn btn-primary">Back to homepage</a>
+            
+        </div>
+    </div>
+</div>

@@ -5,79 +5,127 @@
 
 
 
-    // Delar upp bokningarna i olika object baserat på dagens datum och bokningarnas start date
-
     var today = DateTime.Today;
 
+
+
     var futureBookings = Model.Where(b => b.StartDate >= today).OrderBy(b => b.StartDate);
+
+
 
     var pastBookings = Model.Where(b => b.StartDate < today).OrderByDescending(b => b.StartDate);
 }
 
-<h1>ListUserBookings</h1>
+@if (!futureBookings.Any() && !pastBookings.Any())
+{
+    <div class="d-flex justify-content-center align-items-start vh-100 pt-5">
+        <div class="text-center">
+            <h2 class="mb-4">This user has made no bookings yet.</h2>
+            <a asp-controller="Customer" asp-action="ListAllCustomers" class="btn btn-primary me-2">Back</a>
+            <a asp-controller="Home" asp-action="Index" class="btn btn-danger me-2">Home</a>
+        </div>
+    </div>
+}
+@if (futureBookings != null && futureBookings.Any())
+{
+    <h2 class="mb-4">Upcoming Bookings</h2>
+}
+<!-- Lista alla bokningar dynamsikt beroende på vem som är inloggad-->
 
-<h2>Upcoming Bookings</h2>
-<table class="table">
-    <thead>
-        <tr>
-            <th>@Html.DisplayNameFor(model => model.StartDate)</th>
-            <th>@Html.DisplayNameFor(model => model.EndDate)</th>
-            <th>@Html.DisplayNameFor(model => model.Car)</th>
-            <th>@Html.DisplayNameFor(Model => Model.Car.ModelYear)</th>
-            <th>@Html.DisplayNameFor(model => model.Customer)</th>
-            <th>E-mail</th>
-            <th>@Html.DisplayNameFor(model => model.TotalCost)</th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var item in futureBookings)
+@foreach (var item in futureBookings)
 
-        {
-            <tr>
-                <td>@item.StartDate.ToShortDateString()</td>
-                <td>@item.EndDate.ToShortDateString()</td>
-                <td>@($"{item.Car.Brand} {item.Car.Model}")</td>
-                <td>@item.Car.ModelYear</td>
-                <td>@($"{item.Customer.FirstName} {item.Customer.LastName}")</td>
-                <td>@item.Customer.Email</td>
-                <td>@($"{item.TotalCost} $")</td>
-                <td> 
-                    <a asp-action="Details" asp-route-id="@item.BookingId">Details</a> |
-                    <a asp-action="UnbookBooking" asp-route-bookingId="@item.BookingId">Unbook</a>
-                </td>
-            </tr>
-        }
-    </tbody>
-</table>
+{
+    <div class="booking-box" style="background-color: lightgreen; padding: 1em; margin-bottom: 1em; border-radius: 8px;">
+        <table class="table table-borderless">
+            <thead>
+                <tr>
+                    <th>Start date:</th>
+                    <th>End date:</th>
+                    <th>Car:</th>
+                    <th>Model year:</th>
+                    <th>Customer:</th>
+                    <th>E-mail:</th>
+                    <th>Total cost:</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>@item.StartDate.ToShortDateString()</td>
+                    <td>@item.EndDate.ToShortDateString()</td>
+                    <td>@($"{item.Car.Brand} {item.Car.Model}")</td>
+                    <td>@item.Car.ModelYear</td>
+                    <td>@($"{item.Customer.FirstName} {item.Customer.LastName}")</td>
+                    <td>@item.Customer.Email</td>
+                    <td>@($"${item.TotalCost}")</td>
+                    <td>
+                        <!-- Lägger till edit och delete knappar för admin-->
+                        @if (User.IsInRole("Admin"))
 
-<h2>Past Bookings</h2>
-<table class="table">
-    <thead>
-        <tr>
-            <th>@Html.DisplayNameFor(model => model.StartDate)</th>
-            <th>@Html.DisplayNameFor(model => model.EndDate)</th>
-            <th>@Html.DisplayNameFor(model => model.Car)</th>
-            <th>@Html.DisplayNameFor(Model => Model.Car.ModelYear)</th>
-            <th>@Html.DisplayNameFor(model => model.Customer)</th>
-            <th>E-mail</th>
-            <th>@Html.DisplayNameFor(model => model.TotalCost)</th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var item in pastBookings)
+                        {
+                            
+                            <a asp-action="Edit" asp-route-id="@item.BookingId" class="btn btn-primary me-2">Edit</a>
+                            <a asp-action="Delete" asp-route-Id="@item.BookingId" class="btn btn-danger me-2"> Delete </a>
+                           
+                            
+                        }
 
-        {
-            <tr>
-                <td>@item.StartDate.ToShortDateString()</td>
-                <td>@item.EndDate.ToShortDateString()</td>
-                <td>@($"{item.Car.Brand} {item.Car.Model}")</td>
-                <td>@item.Car.ModelYear</td>
-                <td>@($"{item.Customer.FirstName} {item.Customer.LastName}")</td>
-                <td>@item.Customer?.Email</td>
-                <td>@($"{item.TotalCost} $")</td>
-            </tr>
-        }
-    </tbody>
-</table>
+                        @if (User.IsInRole("Customer"))
+
+                        {
+                            <a asp-action="UnbookBooking" asp-route-bookingId="@item.BookingId" class="btn btn-danger"> Unbook </a>
+                        }
+
+                 
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+}
+@if (pastBookings != null && pastBookings.Any())
+{
+    <h2 class="mb-4">Past Bookings</h2>
+}
+
+@foreach (var item in pastBookings)
+
+{
+    <div class="booking-box" style="background-color: lightblue; padding: 1em; margin-bottom: 1em; border-radius: 8px;">
+        <table class="table table-borderless">
+            <thead>
+                <tr>
+                    <th>Start date:</th>
+                    <th>End date:</th>
+                    <th>Car:</th>
+                    <th>Model Year:</th>
+                    <th>Customer:</th>
+                    <th>E-mail:</th>
+                    <th>Total cost:</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>@item.StartDate.ToShortDateString()</td>
+                    <td>@item.EndDate.ToShortDateString()</td>
+                    <td>@($"{item.Car.Brand} {item.Car.Model}")</td>
+                    <td>@item.Car.ModelYear</td>
+                    <td>@($"{item.Customer.FirstName} {item.Customer.LastName}")</td>
+                    <td>@item.Customer?.Email</td>
+                    <td>@($"${item.TotalCost}")</td>
+                    <td>
+                        <!-- Lägger till edit och delete knappar för admin-->
+                        @if (User.IsInRole("Admin"))
+
+                        {
+                            <a asp-action="Edit" asp-route-id="@item.BookingId" class="btn btn-primary me-2">Edit</a>
+
+                            <a asp-action="Delete" asp-route-id="@item.BookingId" class="btn btn-danger me-2">Delete</a>
+                        }
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+}

@@ -1,0 +1,51 @@
+﻿@model Customer
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<div class="d-flex justify-content-center align-items-center" style="min-height: 90vh; margin-top: -50px;">
+    <div class="card shadow-sm p-4 bg-light" style="max-width: 500px; width: 100%;">
+        <div class="card-body">
+            <div class="d-flex justify-content-center align-items-center mb-3">
+                <h2 class="text-center">Enter Customer Details</h2>
+            </div>
+            <!-- Formulär för att ändra customer details-->
+            <form asp-action="Edit" method="post">
+                @Html.AntiForgeryToken()
+                @Html.HiddenFor(model => model.CustomerId)
+                @Html.HiddenFor(model => model.Bookings)
+                @Html.HiddenFor(model => model.Role.UserRoleId)
+                @Html.HiddenFor(model => model.Role.Role)
+
+                <div class="mb-3">
+                    <label class="form-label" for="FirstNameInput">First name:</label>
+                    @Html.TextBoxFor(model => model.FirstName, new { @class = "form-control", id = "FirstNameInput" })
+                    @Html.ValidationMessageFor(model => model.FirstName, "", new { @class = "text-danger" })
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label" for="LastNameInput">Last name:</label>
+                    @Html.TextBoxFor(model => model.LastName, new { @class = "form-control", id = "LastNameInput" })
+                    @Html.ValidationMessageFor(model => model.LastName, "", new { @class = "text-danger" })
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label" for="EmailInput">Email:</label>
+                    @Html.TextBoxFor(model => model.Email, new { @class = "form-control", id = "EmailInput" })
+                    @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label" for="PasswordInput">Password:</label>
+                    @Html.TextBoxFor(model => model.Password, new { @class = "form-control", id = "PasswordInput" })
+                    @Html.ValidationMessageFor(model => model.Password, "", new { @class = "text-danger" })
+                </div>
+
+                <div class="d-flex flex-column justify-content-center align-items-center mt-3">
+                    <button type="submit" class="btn btn-primary btn-block">Update Customer</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

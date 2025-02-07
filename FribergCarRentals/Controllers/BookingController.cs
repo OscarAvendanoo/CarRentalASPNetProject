@@ -12,18 +12,18 @@ namespace FribergCarRentals.Controllers
     public class BookingController : Controller
     {
         private readonly IRepository<Car> _carRepository;
-        private readonly BookingRepository _bookingRepository;
-        private readonly CustomerRepository _customerRepository;
-        public BookingController(IRepository<Car> carRepository,BookingRepository bookingrepository,CustomerRepository customerRepository)
+        private readonly IBookingRepository _bookingRepository;
+        private readonly ICustomerRepository _customerRepository;
+        public BookingController(IRepository<Car> carRepository,IBookingRepository bookingRepository,ICustomerRepository customerRepository)
         {
             this._carRepository = carRepository;
-            this._bookingRepository = bookingrepository;
+            this._bookingRepository = bookingRepository;
             this._customerRepository = customerRepository;
         }
 
-        public IActionResult UnbookBooking(int bookingId)
+        public async Task<IActionResult> UnbookBooking(int bookingId)
         {
-            var bookingToUnbook = _bookingRepository.GetBookingByIdIncludeCustomerAndCar(bookingId);
+            var bookingToUnbook = await _bookingRepository.GetBookingByIdIncludeCustomerAndCarAsync(bookingId);
             if (bookingToUnbook == null)
             {
                 // returnerar en not found sida
@@ -34,66 +34,58 @@ namespace FribergCarRentals.Controllers
                 return View(bookingToUnbook);
             }
         }
+        
         [Authorize]
         [ValidateAntiForgeryToken]
         [HttpPost]
-        public IActionResult DeleteConfirmed(int bookingId)
+        public async Task<IActionResult> DeleteConfirmed(int bookingId)
         {
-            var bookingToDelete = _bookingRepository.GetbyID(bookingId);
+            var bookingToDelete = await  _bookingRepository.GetByIDAsync(bookingId);
 
             // Om bokningen är null eller är en passerad bokning returneras not found
             if (bookingToDelete == null || bookingToDelete.StartDate < DateTime.Today)
             {
                 return NotFound();
             }
-            _bookingRepository.Delete(bookingToDelete);
+            await _bookingRepository.DeleteAsync(bookingToDelete);
 
             // redirect to action ropar på en method i samma controller
             return RedirectToAction(nameof(ListUserBookings));
 
+            
         }
-        public IActionResult ListUserBookings()
+        [Authorize(Roles = "Customer")]
+        [HttpGet]
+        [Route("ListUserBookings")]
+        public async Task<IActionResult> ListUserBookings()
         {
-            var bookings = _bookingRepository.GetBookingByUserID(int.Parse(User.FindFirstValue("UserId")));
-            return View(bookings);
+            var userBookings = await _bookingRepository.GetBookingByUserIDAsync(int.Parse(User.FindFirstValue("UserId")));
+            return View(userBookings);   
         }
+
+        [Authorize(Roles = "Admin")]
+        [HttpGet]
+        [Route("ListUserBookings/{id:int}")]
+        public async Task<IActionResult> ListUserBookings(int id)
+        {
+            var userBookings = await _bookingRepository.GetBookingByUserIDAsync(id);
+            return View(userBookings);
+        }
+
         // GET: BookingController
-        public ActionResult ListAllCars()
+        public async Task<ActionResult> ListAllCars()
         {
-            var cars = _carRepository.GetAll();
+            var cars = await _carRepository.GetAllAsync();
             return View(cars);
         }
-        //public IActionResult StartBooking(int carId)
-        //{
-        //    // Hämtar bil och kollar så att ej är null
-        //    var car = _carRepository.GetbyID(carId);
-        //    if (car == null)
-        //    {
-        //        return NotFound();
-        //    }
-        //    // View model för att skicka car id till vyn, skapar även mallen för formuläret.
-        //    var model = new StartBookingVM
-        //    {
-        //        LoginForm = new LoginAndBookVM { CarId = carId },
-        //        RegisterForm = new RegisterBeforeBookingVM { CarId = carId }
-        //    };
-            
-        //    if (User.Identity.IsAuthenticated)
-        //    {
-        //        // skapar ett anonymt objekt som parameter här, methoden som anropas behöver ett namn på värdet som skickas som parameter, carId vara både namnet här och i methodens parameter
-        //        return RedirectToAction("ConfirmBooking", "Booking",new { carId = car.CarId });
-        //    }
-            
-        //    return View(model);
-        //}
 
-        public IActionResult ConfirmBooking(int carId)
+        [Authorize(Roles = "Customer")]
+        public async Task<IActionResult> ConfirmBooking(int carId)
         {
-            var car = _carRepository.GetbyID(carId);
+            var car = await _carRepository.GetByIDAsync(carId);
 
             if (car == null)
             {
-                // If the car doesn't exist, redirect to an error page or show a message
                 return NotFound("Car not found.");
             }
             var bookingConfirmationVM = new BookingConfirmationVM
@@ -101,59 +93,60 @@ namespace FribergCarRentals.Controllers
                 CarId = car.CarId,
                 Brand = car.Brand,
                 Model = car.Model,
+                ModelYear = car.ModelYear,
                 PricePerDay = car.PricePerDay,
                 ImageUrl = car.carImages[0] 
             };
             return View(bookingConfirmationVM);
         }
 
+        [Authorize(Roles = "Customer")]
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult CompleteBooking(BookingConfirmationVM bookingDetails)
+        public async Task<IActionResult> CompleteBooking(BookingConfirmationVM bookingDetails)
         {
             if (!ModelState.IsValid)
             {
-                // If the model is invalid, redisplay the confirmation page with validation messages
+               
                 return View("ConfirmBooking", bookingDetails);
             }
 
-            // Validate the rental period (e.g., check for conflicts, ensure dates are valid, etc.)
+           
             if (bookingDetails.StartDate >= bookingDetails.EndDate)
             {
                 ModelState.AddModelError("", "The start date must be before the end date.");
                 return View("ConfirmBooking", bookingDetails);
             }
-
-            // Proceed with booking logic
-            var car = _carRepository.GetbyID(bookingDetails.CarId);
-            var customer = _customerRepository.GetbyID(int.Parse(User.FindFirstValue("UserId")));
+            
+            var car = await _carRepository.GetByIDAsync(bookingDetails.CarId);
+            var customer = await _customerRepository.GetByIDAsync(int.Parse(User.FindFirstValue("UserId")));
 
             var booking = new Booking
             {
                 CarId = car.CarId,
-                CustomerId = int.Parse(User.FindFirstValue("UserId")), // Retrieve the logged-in user's ID
+                CustomerId = int.Parse(User.FindFirstValue("UserId")),
                 StartDate = bookingDetails.StartDate,
                 EndDate = bookingDetails.EndDate,
                 TotalCost = (bookingDetails.EndDate - bookingDetails.StartDate).Days * car.PricePerDay
             };
 
-            _bookingRepository.Add(booking);
+            await _bookingRepository.AddAsync(booking);
             
-
-            // Redirect to a confirmation or summary page
             return RedirectToAction("BookingSummary", new { bookingId = booking.BookingId });
         }
-        public IActionResult BookingSummary(int bookingId)
+
+        [Authorize(Roles = "Customer")]
+        public async Task<IActionResult> BookingSummary(int bookingId)
         {
-            // Fetch the booking from the database using the bookingId
-            var booking = _bookingRepository.GetBookingByIdIncludeCustomerAndCar(bookingId);
+            
+            var booking = await _bookingRepository.GetBookingByIdIncludeCustomerAndCarAsync(bookingId);
 
             if (booking == null)
             {
                 return NotFound("Booking not found.");
             }
 
-            // Prepare a ViewModel to pass data to the view
+           
             var summaryVM = new BookingSummaryVm
             {
                 BookingId = booking.BookingId,
@@ -163,78 +156,111 @@ namespace FribergCarRentals.Controllers
                 EndDate = booking.EndDate,
                 TotalPrice = booking.TotalCost,
                 CustomerName = $"{booking.Customer.FirstName} {booking.Customer.LastName}",
-                CustomerEmail = booking.Customer.Email
+                CustomerEmail = booking.Customer.Email,
+                ImageUrl = booking.Car.carImages[0]
             };
 
             return View(summaryVM);
         }
 
-        // GET: BookingController/Details/5
-        public ActionResult Details(int id)
-        {
-            return View();
-        }
-
-        // GET: BookingController/Create
-        public ActionResult Create()
-        {
-            return View();
-        }
-
-        // POST: BookingController/Create
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Create(IFormCollection collection)
-        {
-            try
-            {
-                return RedirectToAction(nameof(Index));
-            }
-            catch
-            {
-                return View();
-            }
-        }
 
         // GET: BookingController/Edit/5
-        public ActionResult Edit(int id)
+        [Authorize(Roles = "Admin")]
+        public async Task<ActionResult> Edit(int id)
         {
-            return View();
+            var booking = await _bookingRepository.GetByIDAsync(id);
+            var bookingToEditVM = new BookingEditViewModel { BookingId = id, 
+                                                             CustomerId = booking.CustomerId,
+                                                             CarId = booking.CarId};
+            return View(bookingToEditVM);
         }
 
         // POST: BookingController/Edit/5
+        [Authorize(Roles = "Admin")]
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit(int id, IFormCollection collection)
+        public async Task<ActionResult> Edit(BookingEditViewModel bookingToUpdateVM)
         {
-            try
+
+            if (!ModelState.IsValid)
             {
-                return RedirectToAction(nameof(Index));
+                return View(bookingToUpdateVM);
             }
-            catch
+            var car = await _carRepository.GetByIDAsync(bookingToUpdateVM.CarId);
+            if (car == null)
             {
+                ModelState.AddModelError("", "A car with that ID could not be found");
                 return View();
             }
+            var customer = await _customerRepository.GetByIDAsync(bookingToUpdateVM.CustomerId);
+            if (customer == null)
+            {
+                ModelState.AddModelError("", "A customer with that ID could not be found");
+                return View(bookingToUpdateVM);
+            }
+            if (bookingToUpdateVM.StartDate >= bookingToUpdateVM.EndDate)
+            {
+                ModelState.AddModelError("", "The start date must be before the end date.");
+                return View(bookingToUpdateVM);
+            }
+            var bookingToUpdate = await _bookingRepository.GetByIDAsync(bookingToUpdateVM.BookingId);
+            bookingToUpdate.StartDate = bookingToUpdateVM.StartDate;
+            bookingToUpdate.EndDate = bookingToUpdateVM.EndDate;
+            bookingToUpdate.CarId = bookingToUpdateVM.CarId;
+            bookingToUpdate.CustomerId = bookingToUpdateVM.CustomerId;
+            bookingToUpdate.Car = car;
+            bookingToUpdate.Customer = customer;
+            bookingToUpdate.TotalCost = (bookingToUpdateVM.EndDate - bookingToUpdateVM.StartDate).Days * car.PricePerDay;
+
+            var updatedBooking = await _bookingRepository.UpdateAsync(bookingToUpdate);
+
+            return RedirectToAction("BookingUpdateConfirmed", new { id = bookingToUpdate.BookingId });
         }
+
+
+        [Authorize(Roles = "Admin")]
+        public async Task<IActionResult> BookingUpdateConfirmed(int id)
+        {
+            var updatedBooking= await _bookingRepository.GetBookingByIdIncludeCustomerAndCarAsync(id);
+            return View(updatedBooking);
+        }
+
 
         // GET: BookingController/Delete/5
-        public ActionResult Delete(int id)
+        [Authorize(Roles = "Admin")]
+        public async Task<ActionResult> Delete(int id)
         {
-            return View();
+            var bookingToDelete = await _bookingRepository.GetBookingByIdIncludeCustomerAndCarAsync(id);
+
+            if (bookingToDelete == null)
+            {
+              
+                return NotFound();
+            }
+            else
+            {
+                return View(bookingToDelete);
+            }
+
         }
 
+
         // POST: BookingController/Delete/5
+        [Authorize(Roles = "Admin")]
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Delete(int id, IFormCollection collection)
+        public async Task<ActionResult> DeleteFromDatabase(int id)
         {
+            var BookingToDelete = await _bookingRepository.GetByIDAsync(id);
+
             try
             {
-                return RedirectToAction(nameof(Index));
+                await _bookingRepository.DeleteAsync(BookingToDelete);
+                return RedirectToAction("ListAllCustomers", "Customer");
             }
             catch
             {
-                return View();
+                return NotFound();
             }
         }
     }

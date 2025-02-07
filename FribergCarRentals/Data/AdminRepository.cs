@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace FribergCarRentals.Data
 {
-    public class AdminRepository : GenericRepository<Admin>
+    public class AdminRepository : GenericRepository<Admin> , IAdminRepository
     {
         private readonly ApplicationDbContext _context;
 
@@ -11,10 +11,11 @@ namespace FribergCarRentals.Data
         {
             _context = applicationDbContext;
         }
-        public Admin GetAdminByEmail(string email)
+        public async Task<Admin> GetAdminByEmailAsync(string email)
         {
-            var admin = _context.Admins.Include(u => u.Role).FirstOrDefault(u => u.Email == email);
-            return admin;
+            return await _context.Admins.Include(u => u.Role).FirstOrDefaultAsync(u => u.Email == email); 
         }
+
     }
 }
+

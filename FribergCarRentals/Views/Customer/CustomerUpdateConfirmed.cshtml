@@ -1,0 +1,48 @@
+﻿@model Customer
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+
+<h1 class="text-center fs-1">The customer was successfully updated.</h1>
+
+<div class="container my-4">
+    <!-- Card för customer -->
+    <div class="card">
+        <div class="card-header">
+            <h4 class="fs-3">Customer details:</h4>
+        </div>
+        <div class="card-body">
+            <div class="row justify-content-center">
+                <!-- Customer details vänstersida-->
+                <div class="col-md-5">
+                    <dl class="row mt-4">
+                        <dt class="col-sm-4 fs-5 fw-bold">Customer ID:</dt>
+                        <dd class="col-sm-8 fs-4">@Html.DisplayFor(model => model.CustomerId)</dd>
+                        <dt class="col-sm-4 fs-5 fw-bold">First name:</dt>
+                        <dd class="col-sm-8 fs-4">@Html.DisplayFor(Model => Model.FirstName)</dd>
+                        <dt class="col-sm-4 fs-5 fw-bold">Last name:</dt>
+                        <dd class="col-sm-8 fs-4">@Html.DisplayFor(model => model.LastName)</dd>
+                        <dt class="col-sm-4 fs-5 fw-bold">Email:</dt>
+                        <dd class="col-sm-8 fs-4">@Html.DisplayFor(model => model.Email)</dd>
+                        <dt class="col-sm-4 fs-5 fw-bold">Password:</dt>
+                        <dd class="col-sm-8 fs-4">@Html.DisplayFor(model => model.Password)</dd>
+                    </dl>
+                </div>
+                <!-- Bild höger sida -->
+                <div class="col-md-5">
+                    <img src="https://antrapuse.lt/images/get/h/f28be615-935a-4b26-864a-499db7bca2a9/m"
+                         alt="Booking Image"
+                         class="img-fluid w-50 float-end" />
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- navigations knappar-->
+<div class="mt-4 d-flex justify-content-center gap-3">
+    <a asp-controller="Home" asp-action="Index" class="btn btn-primary btn-lg">Go to Home</a>
+    <a asp-controller="Customer" asp-action="ListAllCustomers" class="btn btn-secondary btn-lg">View customers</a>
+</div>
+

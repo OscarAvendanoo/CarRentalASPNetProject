@@ -5,6 +5,66 @@
       "PackagePath": "staticwebassets\\FribergCarRentals.bundle.scp.css"
     },
     {
+      "Id": "C:\\Users\\Oscar\\source\\repos\\FribergCarRentals\\FribergCarRentals\\wwwroot\\Fonts\\CinzelDecorative-Black.ttf",
+      "PackagePath": "staticwebassets\\Fonts\\CinzelDecorative-Black.ttf"
+    },
+    {
+      "Id": "C:\\Users\\Oscar\\source\\repos\\FribergCarRentals\\FribergCarRentals\\wwwroot\\Fonts\\CinzelDecorative-Bold.ttf",
+      "PackagePath": "staticwebassets\\Fonts\\CinzelDecorative-Bold.ttf"
+    },
+    {
+      "Id": "C:\\Users\\Oscar\\source\\repos\\FribergCarRentals\\FribergCarRentals\\wwwroot\\Fonts\\CinzelDecorative-Regular.ttf",
+      "PackagePath": "staticwebassets\\Fonts\\CinzelDecorative-Regular.ttf"
+    },
+    {
+      "Id": "C:\\Users\\Oscar\\source\\repos\\FribergCarRentals\\FribergCarRentals\\wwwroot\\Fonts\\palatino-linotype-italic.ttf",
+      "PackagePath": "staticwebassets\\Fonts\\palatino-linotype-italic.ttf"
+    },
+    {
+      "Id": "C:\\Users\\Oscar\\source\\repos\\FribergCarRentals\\FribergCarRentals\\wwwroot\\Fonts\\proximanova_black.otf",
+      "PackagePath": "staticwebassets\\Fonts\\proximanova_black.otf"
+    },
+    {
+      "Id": "C:\\Users\\Oscar\\source\\repos\\FribergCarRentals\\FribergCarRentals\\wwwroot\\Fonts\\proximanova_black.ttf",
+      "PackagePath": "staticwebassets\\Fonts\\proximanova_black.ttf"
+    },
+    {
+      "Id": "C:\\Users\\Oscar\\source\\repos\\FribergCarRentals\\FribergCarRentals\\wwwroot\\Fonts\\proximanova_blackit.otf",
+      "PackagePath": "staticwebassets\\Fonts\\proximanova_blackit.otf"
+    },
+    {
+      "Id": "C:\\Users\\Oscar\\source\\repos\\FribergCarRentals\\FribergCarRentals\\wwwroot\\Fonts\\proximanova_bold.otf",
+      "PackagePath": "staticwebassets\\Fonts\\proximanova_bold.otf"
+    },
+    {
+      "Id": "C:\\Users\\Oscar\\source\\repos\\FribergCarRentals\\FribergCarRentals\\wwwroot\\Fonts\\proximanova_boldit.otf",
+      "PackagePath": "staticwebassets\\Fonts\\proximanova_boldit.otf"
+    },
+    {
+      "Id": "C:\\Users\\Oscar\\source\\repos\\FribergCarRentals\\FribergCarRentals\\wwwroot\\Fonts\\proximanova_extrabold.otf",
+      "PackagePath": "staticwebassets\\Fonts\\proximanova_extrabold.otf"
+    },
+    {
+      "Id": "C:\\Users\\Oscar\\source\\repos\\FribergCarRentals\\FribergCarRentals\\wwwroot\\Fonts\\proximanova_light.otf",
+      "PackagePath": "staticwebassets\\Fonts\\proximanova_light.otf"
+    },
+    {
+      "Id": "C:\\Users\\Oscar\\source\\repos\\FribergCarRentals\\FribergCarRentals\\wwwroot\\Fonts\\proximanova_regular.ttf",
+      "PackagePath": "staticwebassets\\Fonts\\proximanova_regular.ttf"
+    },
+    {
+      "Id": "C:\\Users\\Oscar\\source\\repos\\FribergCarRentals\\FribergCarRentals\\wwwroot\\Images\\companyLogo.png",
+      "PackagePath": "staticwebassets\\Images\\companyLogo.png"
+    },
+    {
+      "Id": "C:\\Users\\Oscar\\source\\repos\\FribergCarRentals\\FribergCarRentals\\wwwroot\\Images\\skoda.jpg",
+      "PackagePath": "staticwebassets\\Images\\skoda.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Oscar\\source\\repos\\FribergCarRentals\\FribergCarRentals\\wwwroot\\Images\\success.png",
+      "PackagePath": "staticwebassets\\Images\\success.png"
+    },
+    {
       "Id": "C:\\Users\\Oscar\\source\\repos\\FribergCarRentals\\FribergCarRentals\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },

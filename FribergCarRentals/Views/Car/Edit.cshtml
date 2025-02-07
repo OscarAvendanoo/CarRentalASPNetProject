@@ -1,0 +1,75 @@
+﻿@model Car
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+<div class="d-flex justify-content-center align-items-center" style="min-height: 90vh; margin-top: -50px;">
+    <div class="card shadow-sm p-4 bg-light" style="max-width: 500px; width: 100%;">
+        <div class="card-body">
+            <div class="d-flex justify-content-center align-items-center mb-3">
+                <h2 class="text-center">Enter Car Details</h2>
+            </div>
+            <!-- Formulär för att ändra bil -->
+            <form asp-action="Edit" method="post">
+                @Html.AntiForgeryToken()
+                @Html.HiddenFor(model => model.CarId)
+
+                <div class="mb-3">
+                    <label class="form-label" for="BrandInput">Brand:</label>
+                    @Html.TextBoxFor(model => model.Brand, new { @class = "form-control", id = "BrandInput" })
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label" for="ModelInput">Model:</label>
+                    @Html.TextBoxFor(model => model.Model, new { @class = "form-control", id = "ModelInput" })
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label" for="ModelYearInput">Model year:</label>
+                    @Html.TextBoxFor(model => model.ModelYear, new { @class = "form-control", id = "ModelYearInput" })
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label" for="PriceInput">Price per day (dollar):</label>
+                    @Html.TextBoxFor(model => model.PricePerDay, new { @class = "form-control", id = "PriceInput" })
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label" for="ColorInput">Color:</label>
+                    @Html.TextBoxFor(model => model.Color, new { @class = "form-control", id = "ColorInput" })
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label" for="CarImageInput0">Image URL 1:</label>
+                    @Html.TextBoxFor(model => model.carImages[0], new { @class = "form-control", id = "CarImageInput0" })
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label" for="CarImageInput1">Image URL 2:</label>
+                    @Html.TextBoxFor(model => model.carImages[1], new { @class = "form-control", id = "CarImageInput1" })
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label" for="CarImageInput2">Image URL 3:</label>
+                    @Html.TextBoxFor(model => model.carImages[2], new { @class = "form-control", id = "CarImageInput2" })
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label" for="CarImageInput3">Image URL 4:</label>
+                    @Html.TextBoxFor(model => model.carImages[3], new { @class = "form-control", id = "CarImageInput3" })
+                </div>
+
+                <div class="form-check mt-3">
+                    <input asp-for="IsAvailable" type="checkbox" class="form-check-input" id="IsAvailableCheck" />
+                    <label class="form-check-label" for="IsAvailableCheck">Is Available</label>
+                </div>
+
+                <div class="d-flex flex-column justify-content-center align-items-center mt-3">
+                    <button type="submit" class="btn btn-primary btn-block">Update Car</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

@@ -1,4 +1,5 @@
 ﻿using FribergCarRentals.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace FribergCarRentals.Data
 {
@@ -10,5 +11,6 @@ namespace FribergCarRentals.Data
         {
             _context = applicationDbContext;
         }
+
     }
 }

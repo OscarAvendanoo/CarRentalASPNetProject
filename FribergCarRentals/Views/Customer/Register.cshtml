@@ -1,0 +1,44 @@
+﻿@model FribergCarRentals.ViewModel.RegisterVm
+
+<div class="d-flex justify-content-center align-items-center" style="margin-top: 10em; margin-bottom: 2em;">
+    <div class="register-box">
+        <h2 class="text-center mb-4">Register:</h2> <!-- Centered inside the box -->
+        <form asp-controller="Customer" asp-action="Register" method="post">
+            @Html.AntiForgeryToken()
+
+            <!-- Validerings errors -->
+            <div class="text-danger">
+                @Html.ValidationSummary(false, "")
+            </div>
+
+            <!-- Förnamn -->
+            <div class="form-outline mb-3">
+                <label class="form-label" for="firstNameInput">First Name</label>
+                @Html.TextBoxFor(model => model.FirstName, new { @class = "form-control", id = "firstNameInput" })
+            </div>
+
+            <!-- Efternamn -->
+            <div class="form-outline mb-3">
+                <label class="form-label" for="lastNameInput">Last Name</label>
+                @Html.TextBoxFor(model => model.LastName, new { @class = "form-control", id = "lastNameInput" })
+            </div>
+
+            <!-- Email -->
+            <div class="form-outline mb-3">
+                <label class="form-label" for="registerFormEmailInput">Email address</label>
+                @Html.TextBoxFor(model => model.Email, new { @class = "form-control", id = "registerFormEmailInput" })
+            </div>
+
+            <!-- Lösenord -->
+            <div class="form-outline mb-3">
+                <label class="form-label" for="registerFormPasswordInput">Password</label>
+                @Html.PasswordFor(model => model.Password, new { @class = "form-control", id = "registerFormPasswordInput" })
+            </div>
+
+            <!-- Submit knapp -->
+            <div class="d-flex justify-content-center mt-5 mb-4">
+                <button type="submit" class="btn btn-primary w-50">Register</button>
+            </div>
+        </form>
+    </div>
+</div>

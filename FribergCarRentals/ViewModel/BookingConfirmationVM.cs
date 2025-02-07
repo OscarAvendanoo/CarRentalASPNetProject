@@ -8,6 +8,7 @@ namespace FribergCarRentals.ViewModel
         public int CarId { get; set; }
         public string Brand { get; set; }
         public string Model { get; set; }
+        public string ModelYear { get; set; }   
         public decimal PricePerDay { get; set; }
         public string ImageUrl { get; set; }
         [Required(ErrorMessage = "Please select a start date.")]

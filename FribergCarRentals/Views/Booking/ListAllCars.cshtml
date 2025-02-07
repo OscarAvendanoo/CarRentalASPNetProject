@@ -4,11 +4,14 @@
     ViewData["Title"] = "Index";
 }
 
-<h1>Index</h1>
+<!-- Lista alla bilar dynamiskt beroende på inloggad användare-->
 
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
+@if (User.IsInRole("Admin"))
+{
+    <p>
+        <a asp-controller = "Car"asp-action="Create" class="btn btn-lg btn-primary ms-3">Create New</a>
+    </p>
+}
 <table class="table">
 
     <tbody>
@@ -16,6 +19,10 @@
             <div class="row">
                 @foreach (var item in Model)
                 {
+                    if(User.IsInRole("Customer") && item.IsAvailable == false)
+                    {
+                        continue;
+                    }
                     var defaultImage = "https://esquire-shop.co.za/images/noimg.png";
                     var imageUrl = (item.carImages != null && item.carImages.Length > 0) ? item.carImages[0] : defaultImage;
                     <div class="col-md-3 mb-4">
@@ -26,13 +33,21 @@
                                 <hr>
                                 <p class="card-text d-flex justify-content-between">Year: <span>@item.ModelYear</span></p>
                                 <p class="card-text d-flex justify-content-between">Is Available: <span>@(item.IsAvailable ? "Yes" : "No")</span></p>
-                                <p class="card-text d-flex justify-content-between">Price: <span style="font-weight: bold;">@item.PricePerDay:-/day</span></p>
+                                <p class="card-text d-flex justify-content-between">Price: <span style="font-weight: bold;">$@item.PricePerDay/day</span></p>
                                 <hr>
-                                <a href="#" class="btn btn-secondary btn-lg w-100 mb-2">Details</a>
-                                <form asp-controller="Customer" asp-action="LoginOrRegisterBeforeBooking" method="get">
-                                    <input type="hidden" name="carId" value="@item.CarId"/>
-                                    <button type="submit" class="btn btn-primary btn-lg w-100">Rent Now</button>
-                                </form>
+                               
+                                @if (User.IsInRole("Admin"))
+                                {
+                                    <a asp-controller="Car" asp-action="Edit" asp-route-id="@item.CarId" class="btn btn-primary btn-lg w-100 mb-2">Edit</a>
+                                    <a asp-controller="Car" asp-action="Delete" asp-route-id="@item.CarId" class="btn btn-danger btn-lg w-100 mb-2">Delete</a>
+                                }
+                                @if (!User.IsInRole("Admin"))
+                                {
+                                    <form asp-controller="Customer" asp-action="LoginOrRegisterBeforeBooking" method="get">
+                                        <input type="hidden" name="carId" value="@item.CarId" />
+                                        <button type="submit" class="btn btn-primary btn-lg w-100">Rent Now</button>
+                                    </form>
+                                }
                                 
                             </div>
                         </div>

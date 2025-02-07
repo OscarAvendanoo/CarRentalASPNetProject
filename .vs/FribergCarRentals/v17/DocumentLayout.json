@@ -3,82 +3,78 @@
   "WorkspaceRootPath": "C:\\Users\\Oscar\\source\\repos\\FribergCarRentals\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{14ECE83C-05DC-43E3-B06A-0AAE859A0F27}|FribergCarRentals\\FribergCarRentals.csproj|c:\\users\\oscar\\source\\repos\\fribergcarrentals\\fribergcarrentals\\controllers\\customercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{14ECE83C-05DC-43E3-B06A-0AAE859A0F27}|FribergCarRentals\\FribergCarRentals.csproj|solutionrelative:fribergcarrentals\\controllers\\customercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{14ECE83C-05DC-43E3-B06A-0AAE859A0F27}|FribergCarRentals\\FribergCarRentals.csproj|c:\\users\\oscar\\source\\repos\\fribergcarrentals\\fribergcarrentals\\views\\booking\\listuserbookings.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{14ECE83C-05DC-43E3-B06A-0AAE859A0F27}|FribergCarRentals\\FribergCarRentals.csproj|solutionrelative:fribergcarrentals\\views\\booking\\listuserbookings.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{14ECE83C-05DC-43E3-B06A-0AAE859A0F27}|FribergCarRentals\\FribergCarRentals.csproj|c:\\users\\oscar\\source\\repos\\fribergcarrentals\\fribergcarrentals\\views\\customer\\registerbeforebook.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{14ECE83C-05DC-43E3-B06A-0AAE859A0F27}|FribergCarRentals\\FribergCarRentals.csproj|solutionrelative:fribergcarrentals\\views\\customer\\registerbeforebook.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/FribergCarRentals/True/SqlTable/dbo.Customers.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{14ECE83C-05DC-43E3-B06A-0AAE859A0F27}|FribergCarRentals\\FribergCarRentals.csproj|c:\\users\\oscar\\source\\repos\\fribergcarrentals\\fribergcarrentals\\views\\customer\\loginorregisterbeforebooking.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{14ECE83C-05DC-43E3-B06A-0AAE859A0F27}|FribergCarRentals\\FribergCarRentals.csproj|solutionrelative:fribergcarrentals\\views\\customer\\loginorregisterbeforebooking.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/FribergCarRentals/True/SqlTable/dbo.Cars.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{14ECE83C-05DC-43E3-B06A-0AAE859A0F27}|FribergCarRentals\\FribergCarRentals.csproj|c:\\users\\oscar\\source\\repos\\fribergcarrentals\\fribergcarrentals\\controllers\\carcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{14ECE83C-05DC-43E3-B06A-0AAE859A0F27}|FribergCarRentals\\FribergCarRentals.csproj|solutionrelative:fribergcarrentals\\controllers\\carcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{14ECE83C-05DC-43E3-B06A-0AAE859A0F27}|FribergCarRentals\\FribergCarRentals.csproj|c:\\users\\oscar\\source\\repos\\fribergcarrentals\\fribergcarrentals\\views\\booking\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{14ECE83C-05DC-43E3-B06A-0AAE859A0F27}|FribergCarRentals\\FribergCarRentals.csproj|solutionrelative:fribergcarrentals\\views\\booking\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{14ECE83C-05DC-43E3-B06A-0AAE859A0F27}|FribergCarRentals\\FribergCarRentals.csproj|c:\\users\\oscar\\source\\repos\\fribergcarrentals\\fribergcarrentals\\controllers\\bookingcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{14ECE83C-05DC-43E3-B06A-0AAE859A0F27}|FribergCarRentals\\FribergCarRentals.csproj|solutionrelative:fribergcarrentals\\controllers\\bookingcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/FribergCarRentals/True/SqlTable/dbo.Customers.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
+      "AbsoluteMoniker": "D:0:0:{14ECE83C-05DC-43E3-B06A-0AAE859A0F27}|FribergCarRentals\\FribergCarRentals.csproj|c:\\users\\oscar\\source\\repos\\fribergcarrentals\\fribergcarrentals\\views\\customer\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{14ECE83C-05DC-43E3-B06A-0AAE859A0F27}|FribergCarRentals\\FribergCarRentals.csproj|solutionrelative:fribergcarrentals\\views\\customer\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{14ECE83C-05DC-43E3-B06A-0AAE859A0F27}|FribergCarRentals\\FribergCarRentals.csproj|c:\\users\\oscar\\source\\repos\\fribergcarrentals\\fribergcarrentals\\viewmodel\\loginandbookvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{14ECE83C-05DC-43E3-B06A-0AAE859A0F27}|FribergCarRentals\\FribergCarRentals.csproj|solutionrelative:fribergcarrentals\\viewmodel\\loginandbookvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{14ECE83C-05DC-43E3-B06A-0AAE859A0F27}|FribergCarRentals\\FribergCarRentals.csproj|c:\\users\\oscar\\source\\repos\\fribergcarrentals\\fribergcarrentals\\views\\car\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{14ECE83C-05DC-43E3-B06A-0AAE859A0F27}|FribergCarRentals\\FribergCarRentals.csproj|solutionrelative:fribergcarrentals\\views\\car\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{14ECE83C-05DC-43E3-B06A-0AAE859A0F27}|FribergCarRentals\\FribergCarRentals.csproj|c:\\users\\oscar\\source\\repos\\fribergcarrentals\\fribergcarrentals\\viewmodel\\startbookingvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{14ECE83C-05DC-43E3-B06A-0AAE859A0F27}|FribergCarRentals\\FribergCarRentals.csproj|solutionrelative:fribergcarrentals\\viewmodel\\startbookingvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{14ECE83C-05DC-43E3-B06A-0AAE859A0F27}|FribergCarRentals\\FribergCarRentals.csproj|c:\\users\\oscar\\source\\repos\\fribergcarrentals\\fribergcarrentals\\views\\car\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{14ECE83C-05DC-43E3-B06A-0AAE859A0F27}|FribergCarRentals\\FribergCarRentals.csproj|solutionrelative:fribergcarrentals\\views\\car\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{14ECE83C-05DC-43E3-B06A-0AAE859A0F27}|FribergCarRentals\\FribergCarRentals.csproj|c:\\users\\oscar\\source\\repos\\fribergcarrentals\\fribergcarrentals\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{14ECE83C-05DC-43E3-B06A-0AAE859A0F27}|FribergCarRentals\\FribergCarRentals.csproj|solutionrelative:fribergcarrentals\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{14ECE83C-05DC-43E3-B06A-0AAE859A0F27}|FribergCarRentals\\FribergCarRentals.csproj|c:\\users\\oscar\\source\\repos\\fribergcarrentals\\fribergcarrentals\\models\\car.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{14ECE83C-05DC-43E3-B06A-0AAE859A0F27}|FribergCarRentals\\FribergCarRentals.csproj|solutionrelative:fribergcarrentals\\models\\car.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{14ECE83C-05DC-43E3-B06A-0AAE859A0F27}|FribergCarRentals\\FribergCarRentals.csproj|c:\\users\\oscar\\source\\repos\\fribergcarrentals\\fribergcarrentals\\data\\userrolerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{14ECE83C-05DC-43E3-B06A-0AAE859A0F27}|FribergCarRentals\\FribergCarRentals.csproj|solutionrelative:fribergcarrentals\\data\\userrolerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{14ECE83C-05DC-43E3-B06A-0AAE859A0F27}|FribergCarRentals\\FribergCarRentals.csproj|c:\\users\\oscar\\source\\repos\\fribergcarrentals\\fribergcarrentals\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{14ECE83C-05DC-43E3-B06A-0AAE859A0F27}|FribergCarRentals\\FribergCarRentals.csproj|solutionrelative:fribergcarrentals\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{14ECE83C-05DC-43E3-B06A-0AAE859A0F27}|FribergCarRentals\\FribergCarRentals.csproj|c:\\users\\oscar\\source\\repos\\fribergcarrentals\\fribergcarrentals\\views\\customer\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{14ECE83C-05DC-43E3-B06A-0AAE859A0F27}|FribergCarRentals\\FribergCarRentals.csproj|solutionrelative:fribergcarrentals\\views\\customer\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{14ECE83C-05DC-43E3-B06A-0AAE859A0F27}|FribergCarRentals\\FribergCarRentals.csproj|c:\\users\\oscar\\source\\repos\\fribergcarrentals\\fribergcarrentals\\models\\customer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{14ECE83C-05DC-43E3-B06A-0AAE859A0F27}|FribergCarRentals\\FribergCarRentals.csproj|solutionrelative:fribergcarrentals\\models\\customer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{14ECE83C-05DC-43E3-B06A-0AAE859A0F27}|FribergCarRentals\\FribergCarRentals.csproj|c:\\users\\oscar\\source\\repos\\fribergcarrentals\\fribergcarrentals\\viewmodel\\registerbeforebookingvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{14ECE83C-05DC-43E3-B06A-0AAE859A0F27}|FribergCarRentals\\FribergCarRentals.csproj|solutionrelative:fribergcarrentals\\viewmodel\\registerbeforebookingvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{14ECE83C-05DC-43E3-B06A-0AAE859A0F27}|FribergCarRentals\\FribergCarRentals.csproj|c:\\users\\oscar\\source\\repos\\fribergcarrentals\\fribergcarrentals\\controllers\\customercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{14ECE83C-05DC-43E3-B06A-0AAE859A0F27}|FribergCarRentals\\FribergCarRentals.csproj|solutionrelative:fribergcarrentals\\controllers\\customercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{14ECE83C-05DC-43E3-B06A-0AAE859A0F27}|FribergCarRentals\\FribergCarRentals.csproj|c:\\users\\oscar\\source\\repos\\fribergcarrentals\\fribergcarrentals\\views\\booking\\listallcars.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{14ECE83C-05DC-43E3-B06A-0AAE859A0F27}|FribergCarRentals\\FribergCarRentals.csproj|solutionrelative:fribergcarrentals\\views\\booking\\listallcars.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{14ECE83C-05DC-43E3-B06A-0AAE859A0F27}|FribergCarRentals\\FribergCarRentals.csproj|c:\\users\\oscar\\source\\repos\\fribergcarrentals\\fribergcarrentals\\views\\customer\\loginorregisterbeforebooking.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{14ECE83C-05DC-43E3-B06A-0AAE859A0F27}|FribergCarRentals\\FribergCarRentals.csproj|solutionrelative:fribergcarrentals\\views\\customer\\loginorregisterbeforebooking.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{14ECE83C-05DC-43E3-B06A-0AAE859A0F27}|FribergCarRentals\\FribergCarRentals.csproj|c:\\users\\oscar\\source\\repos\\fribergcarrentals\\fribergcarrentals\\models\\userrole.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{14ECE83C-05DC-43E3-B06A-0AAE859A0F27}|FribergCarRentals\\FribergCarRentals.csproj|solutionrelative:fribergcarrentals\\models\\userrole.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{14ECE83C-05DC-43E3-B06A-0AAE859A0F27}|FribergCarRentals\\FribergCarRentals.csproj|c:\\users\\oscar\\source\\repos\\fribergcarrentals\\fribergcarrentals\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{14ECE83C-05DC-43E3-B06A-0AAE859A0F27}|FribergCarRentals\\FribergCarRentals.csproj|solutionrelative:fribergcarrentals\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/FribergCarRentals/True/SqlTable/dbo.UserRole.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
+      "AbsoluteMoniker": "D:0:0:{14ECE83C-05DC-43E3-B06A-0AAE859A0F27}|FribergCarRentals\\FribergCarRentals.csproj|c:\\users\\oscar\\source\\repos\\fribergcarrentals\\fribergcarrentals\\views\\customer\\registercomplete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{14ECE83C-05DC-43E3-B06A-0AAE859A0F27}|FribergCarRentals\\FribergCarRentals.csproj|solutionrelative:fribergcarrentals\\views\\customer\\registercomplete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{14ECE83C-05DC-43E3-B06A-0AAE859A0F27}|FribergCarRentals\\FribergCarRentals.csproj|c:\\users\\oscar\\source\\repos\\fribergcarrentals\\fribergcarrentals\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{14ECE83C-05DC-43E3-B06A-0AAE859A0F27}|FribergCarRentals\\FribergCarRentals.csproj|solutionrelative:fribergcarrentals\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{14ECE83C-05DC-43E3-B06A-0AAE859A0F27}|FribergCarRentals\\FribergCarRentals.csproj|c:\\users\\oscar\\source\\repos\\fribergcarrentals\\fribergcarrentals\\views\\customer\\registerbeforebook.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{14ECE83C-05DC-43E3-B06A-0AAE859A0F27}|FribergCarRentals\\FribergCarRentals.csproj|solutionrelative:fribergcarrentals\\views\\customer\\registerbeforebook.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{14ECE83C-05DC-43E3-B06A-0AAE859A0F27}|FribergCarRentals\\FribergCarRentals.csproj|c:\\users\\oscar\\source\\repos\\fribergcarrentals\\fribergcarrentals\\controllers\\inte d\u00F6pt \u00E4n.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{14ECE83C-05DC-43E3-B06A-0AAE859A0F27}|FribergCarRentals\\FribergCarRentals.csproj|solutionrelative:fribergcarrentals\\controllers\\inte d\u00F6pt \u00E4n.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{14ECE83C-05DC-43E3-B06A-0AAE859A0F27}|FribergCarRentals\\FribergCarRentals.csproj|c:\\users\\oscar\\source\\repos\\fribergcarrentals\\fribergcarrentals\\views\\customer\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{14ECE83C-05DC-43E3-B06A-0AAE859A0F27}|FribergCarRentals\\FribergCarRentals.csproj|solutionrelative:fribergcarrentals\\views\\customer\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{14ECE83C-05DC-43E3-B06A-0AAE859A0F27}|FribergCarRentals\\FribergCarRentals.csproj|c:\\users\\oscar\\source\\repos\\fribergcarrentals\\fribergcarrentals\\views\\booking\\listuserbookings.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{14ECE83C-05DC-43E3-B06A-0AAE859A0F27}|FribergCarRentals\\FribergCarRentals.csproj|solutionrelative:fribergcarrentals\\views\\booking\\listuserbookings.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{14ECE83C-05DC-43E3-B06A-0AAE859A0F27}|FribergCarRentals\\FribergCarRentals.csproj|c:\\users\\oscar\\source\\repos\\fribergcarrentals\\fribergcarrentals\\views\\customer\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{14ECE83C-05DC-43E3-B06A-0AAE859A0F27}|FribergCarRentals\\FribergCarRentals.csproj|solutionrelative:fribergcarrentals\\views\\customer\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{14ECE83C-05DC-43E3-B06A-0AAE859A0F27}|FribergCarRentals\\FribergCarRentals.csproj|c:\\users\\oscar\\source\\repos\\fribergcarrentals\\fribergcarrentals\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{14ECE83C-05DC-43E3-B06A-0AAE859A0F27}|FribergCarRentals\\FribergCarRentals.csproj|solutionrelative:fribergcarrentals\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{14ECE83C-05DC-43E3-B06A-0AAE859A0F27}|FribergCarRentals\\FribergCarRentals.csproj|c:\\users\\oscar\\source\\repos\\fribergcarrentals\\fribergcarrentals\\migrations\\20250207203444_updatedsomedataanotations.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{14ECE83C-05DC-43E3-B06A-0AAE859A0F27}|FribergCarRentals\\FribergCarRentals.csproj|solutionrelative:fribergcarrentals\\migrations\\20250207203444_updatedsomedataanotations.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -88,7 +84,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 32,
+          "SelectedChildIndex": 23,
           "Children": [
             {
               "$type": "Bookmark",
@@ -184,101 +180,130 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "RegisterBeforeBook.cshtml",
-              "DocumentMoniker": "C:\\Users\\Oscar\\source\\repos\\FribergCarRentals\\FribergCarRentals\\Views\\Customer\\RegisterBeforeBook.cshtml",
-              "RelativeDocumentMoniker": "FribergCarRentals\\Views\\Customer\\RegisterBeforeBook.cshtml",
-              "ToolTip": "C:\\Users\\Oscar\\source\\repos\\FribergCarRentals\\FribergCarRentals\\Views\\Customer\\RegisterBeforeBook.cshtml",
-              "RelativeToolTip": "FribergCarRentals\\Views\\Customer\\RegisterBeforeBook.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAB1AAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "ListUserBookings.cshtml",
+              "DocumentMoniker": "C:\\Users\\Oscar\\source\\repos\\FribergCarRentals\\FribergCarRentals\\Views\\Booking\\ListUserBookings.cshtml",
+              "RelativeDocumentMoniker": "FribergCarRentals\\Views\\Booking\\ListUserBookings.cshtml",
+              "ToolTip": "C:\\Users\\Oscar\\source\\repos\\FribergCarRentals\\FribergCarRentals\\Views\\Booking\\ListUserBookings.cshtml",
+              "RelativeToolTip": "FribergCarRentals\\Views\\Booking\\ListUserBookings.cshtml",
+              "ViewState": "AgIAABsAAAAAAAAAAAAAABoAAAAKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-01-15T02:44:21.899Z",
+              "WhenOpened": "2025-02-07T20:36:49.063Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "20250207203444_updatedSomeDataAnotations.cs",
+              "DocumentMoniker": "C:\\Users\\Oscar\\source\\repos\\FribergCarRentals\\FribergCarRentals\\Migrations\\20250207203444_updatedSomeDataAnotations.cs",
+              "RelativeDocumentMoniker": "FribergCarRentals\\Migrations\\20250207203444_updatedSomeDataAnotations.cs",
+              "ToolTip": "C:\\Users\\Oscar\\source\\repos\\FribergCarRentals\\FribergCarRentals\\Migrations\\20250207203444_updatedSomeDataAnotations.cs",
+              "RelativeToolTip": "FribergCarRentals\\Migrations\\20250207203444_updatedSomeDataAnotations.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-07T20:34:44.65Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\Oscar\\source\\repos\\FribergCarRentals\\FribergCarRentals\\Views\\Car\\Create.cshtml",
+              "RelativeDocumentMoniker": "FribergCarRentals\\Views\\Car\\Create.cshtml",
+              "ToolTip": "C:\\Users\\Oscar\\source\\repos\\FribergCarRentals\\FribergCarRentals\\Views\\Car\\Create.cshtml",
+              "RelativeToolTip": "FribergCarRentals\\Views\\Car\\Create.cshtml",
+              "ViewState": "AgIAABgAAAAAAAAAAAAAACsAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-07T15:29:02.505Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Car.cs",
+              "DocumentMoniker": "C:\\Users\\Oscar\\source\\repos\\FribergCarRentals\\FribergCarRentals\\Models\\Car.cs",
+              "RelativeDocumentMoniker": "FribergCarRentals\\Models\\Car.cs",
+              "ToolTip": "C:\\Users\\Oscar\\source\\repos\\FribergCarRentals\\FribergCarRentals\\Models\\Car.cs",
+              "RelativeToolTip": "FribergCarRentals\\Models\\Car.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-07T15:26:05.034Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "dbo.Customers [Data]",
-              "DocumentMoniker": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/FribergCarRentals/True/SqlTable/dbo.Customers.sql",
-              "ToolTip": "dbo.Customers [Data]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
-              "WhenOpened": "2025-01-15T02:40:06.891Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "ListAllCars.cshtml",
-              "DocumentMoniker": "C:\\Users\\Oscar\\source\\repos\\FribergCarRentals\\FribergCarRentals\\Views\\Booking\\ListAllCars.cshtml",
-              "RelativeDocumentMoniker": "FribergCarRentals\\Views\\Booking\\ListAllCars.cshtml",
-              "ToolTip": "C:\\Users\\Oscar\\source\\repos\\FribergCarRentals\\FribergCarRentals\\Views\\Booking\\ListAllCars.cshtml",
-              "RelativeToolTip": "FribergCarRentals\\Views\\Booking\\ListAllCars.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB8AAAB3AAAAAAAAAA==",
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "C:\\Users\\Oscar\\source\\repos\\FribergCarRentals\\FribergCarRentals\\Views\\Customer\\Edit.cshtml",
+              "RelativeDocumentMoniker": "FribergCarRentals\\Views\\Customer\\Edit.cshtml",
+              "ToolTip": "C:\\Users\\Oscar\\source\\repos\\FribergCarRentals\\FribergCarRentals\\Views\\Customer\\Edit.cshtml",
+              "RelativeToolTip": "FribergCarRentals\\Views\\Customer\\Edit.cshtml",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAwwCkAAABGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-01-15T01:28:03.778Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-07T15:15:23.192Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "StartBookingVM.cs",
-              "DocumentMoniker": "C:\\Users\\Oscar\\source\\repos\\FribergCarRentals\\FribergCarRentals\\ViewModel\\StartBookingVM.cs",
-              "RelativeDocumentMoniker": "FribergCarRentals\\ViewModel\\StartBookingVM.cs",
-              "ToolTip": "C:\\Users\\Oscar\\source\\repos\\FribergCarRentals\\FribergCarRentals\\ViewModel\\StartBookingVM.cs",
-              "RelativeToolTip": "FribergCarRentals\\ViewModel\\StartBookingVM.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAzAAAAAAAAAA==",
+              "DocumentIndex": 10,
+              "Title": "Customer.cs",
+              "DocumentMoniker": "C:\\Users\\Oscar\\source\\repos\\FribergCarRentals\\FribergCarRentals\\Models\\Customer.cs",
+              "RelativeDocumentMoniker": "FribergCarRentals\\Models\\Customer.cs",
+              "ToolTip": "C:\\Users\\Oscar\\source\\repos\\FribergCarRentals\\FribergCarRentals\\Models\\Customer.cs",
+              "RelativeToolTip": "FribergCarRentals\\Models\\Customer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAABuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-15T00:10:35.211Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-07T15:05:30.723Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "RegisterBeforeBookingVM.cs",
-              "DocumentMoniker": "C:\\Users\\Oscar\\source\\repos\\FribergCarRentals\\FribergCarRentals\\ViewModel\\RegisterBeforeBookingVM.cs",
-              "RelativeDocumentMoniker": "FribergCarRentals\\ViewModel\\RegisterBeforeBookingVM.cs",
-              "ToolTip": "C:\\Users\\Oscar\\source\\repos\\FribergCarRentals\\FribergCarRentals\\ViewModel\\RegisterBeforeBookingVM.cs",
-              "RelativeToolTip": "FribergCarRentals\\ViewModel\\RegisterBeforeBookingVM.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAmAAAAAAAAAA==",
+              "DocumentIndex": 9,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\Oscar\\source\\repos\\FribergCarRentals\\FribergCarRentals\\Views\\Customer\\Create.cshtml",
+              "RelativeDocumentMoniker": "FribergCarRentals\\Views\\Customer\\Create.cshtml",
+              "ToolTip": "C:\\Users\\Oscar\\source\\repos\\FribergCarRentals\\FribergCarRentals\\Views\\Customer\\Create.cshtml",
+              "RelativeToolTip": "FribergCarRentals\\Views\\Customer\\Create.cshtml",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAC4AAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-07T15:02:48.084Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "CustomerController.cs",
+              "DocumentMoniker": "C:\\Users\\Oscar\\source\\repos\\FribergCarRentals\\FribergCarRentals\\Controllers\\CustomerController.cs",
+              "RelativeDocumentMoniker": "FribergCarRentals\\Controllers\\CustomerController.cs",
+              "ToolTip": "C:\\Users\\Oscar\\source\\repos\\FribergCarRentals\\FribergCarRentals\\Controllers\\CustomerController.cs",
+              "RelativeToolTip": "FribergCarRentals\\Controllers\\CustomerController.cs",
+              "ViewState": "AgIAABoBAAAAAAAAAAAgwEMBAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-15T00:09:45.259Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-07T14:35:20.063Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "dbo.Customers.sql",
+              "DocumentMoniker": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/FribergCarRentals/True/SqlTable/dbo.Customers.sql",
+              "ToolTip": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/FribergCarRentals/True/SqlTable/dbo.Customers.sql",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2025-02-07T14:01:33.686Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "C:\\Users\\Oscar\\source\\repos\\FribergCarRentals\\FribergCarRentals\\Views\\Booking\\Edit.cshtml",
+              "RelativeDocumentMoniker": "FribergCarRentals\\Views\\Booking\\Edit.cshtml",
+              "ToolTip": "C:\\Users\\Oscar\\source\\repos\\FribergCarRentals\\FribergCarRentals\\Views\\Booking\\Edit.cshtml",
+              "RelativeToolTip": "FribergCarRentals\\Views\\Booking\\Edit.cshtml",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAADUAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-07T20:56:49.736Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "LoginOrRegisterBeforeBooking.cshtml",
-              "DocumentMoniker": "C:\\Users\\Oscar\\source\\repos\\FribergCarRentals\\FribergCarRentals\\Views\\Customer\\LoginOrRegisterBeforeBooking.cshtml",
-              "RelativeDocumentMoniker": "FribergCarRentals\\Views\\Customer\\LoginOrRegisterBeforeBooking.cshtml",
-              "ToolTip": "C:\\Users\\Oscar\\source\\repos\\FribergCarRentals\\FribergCarRentals\\Views\\Customer\\LoginOrRegisterBeforeBooking.cshtml",
-              "RelativeToolTip": "FribergCarRentals\\Views\\Customer\\LoginOrRegisterBeforeBooking.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAsAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-01-14T23:00:22.528Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "UserRole.cs",
-              "DocumentMoniker": "C:\\Users\\Oscar\\source\\repos\\FribergCarRentals\\FribergCarRentals\\Models\\UserRole.cs",
-              "RelativeDocumentMoniker": "FribergCarRentals\\Models\\UserRole.cs",
-              "ToolTip": "C:\\Users\\Oscar\\source\\repos\\FribergCarRentals\\FribergCarRentals\\Models\\UserRole.cs",
-              "RelativeToolTip": "FribergCarRentals\\Models\\UserRole.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAArAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-14T22:46:11.335Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "dbo.UserRole [Data]",
-              "DocumentMoniker": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/FribergCarRentals/True/SqlTable/dbo.UserRole.sql",
-              "ToolTip": "dbo.UserRole [Data]",
+              "Title": "dbo.Cars.sql",
+              "DocumentMoniker": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/FribergCarRentals/True/SqlTable/dbo.Cars.sql",
+              "ToolTip": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/FribergCarRentals/True/SqlTable/dbo.Cars.sql",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
-              "WhenOpened": "2025-01-14T22:45:38.18Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-07T21:00:00.513Z"
             },
             {
               "$type": "Document",
@@ -288,153 +313,93 @@
               "RelativeDocumentMoniker": "FribergCarRentals\\Controllers\\BookingController.cs",
               "ToolTip": "C:\\Users\\Oscar\\source\\repos\\FribergCarRentals\\FribergCarRentals\\Controllers\\BookingController.cs",
               "RelativeToolTip": "FribergCarRentals\\Controllers\\BookingController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAA/AAAAAAAAAA==",
+              "ViewState": "AgIAAKQAAAAAAAAAAAAgwMoAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-13T20:18:58.402Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-07T20:53:41.193Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "CustomerController.cs",
-              "DocumentMoniker": "C:\\Users\\Oscar\\source\\repos\\FribergCarRentals\\FribergCarRentals\\Controllers\\CustomerController.cs",
-              "RelativeDocumentMoniker": "FribergCarRentals\\Controllers\\CustomerController.cs",
-              "ToolTip": "C:\\Users\\Oscar\\source\\repos\\FribergCarRentals\\FribergCarRentals\\Controllers\\CustomerController.cs",
-              "RelativeToolTip": "FribergCarRentals\\Controllers\\CustomerController.cs",
-              "ViewState": "AgIAACAAAAAAAAAAAAAwwDsAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-13T21:52:54.029Z",
-              "EditorCaption": ""
+              "DocumentIndex": 12,
+              "Title": "LoginOrRegisterBeforeBooking.cshtml",
+              "DocumentMoniker": "C:\\Users\\Oscar\\source\\repos\\FribergCarRentals\\FribergCarRentals\\Views\\Customer\\LoginOrRegisterBeforeBooking.cshtml",
+              "RelativeDocumentMoniker": "FribergCarRentals\\Views\\Customer\\LoginOrRegisterBeforeBooking.cshtml",
+              "ToolTip": "C:\\Users\\Oscar\\source\\repos\\FribergCarRentals\\FribergCarRentals\\Views\\Customer\\LoginOrRegisterBeforeBooking.cshtml",
+              "RelativeToolTip": "FribergCarRentals\\Views\\Customer\\LoginOrRegisterBeforeBooking.cshtml",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAqwEAAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-07T14:27:35.956Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "HomeController.cs",
-              "DocumentMoniker": "C:\\Users\\Oscar\\source\\repos\\FribergCarRentals\\FribergCarRentals\\Controllers\\HomeController.cs",
-              "RelativeDocumentMoniker": "FribergCarRentals\\Controllers\\HomeController.cs",
-              "ToolTip": "C:\\Users\\Oscar\\source\\repos\\FribergCarRentals\\FribergCarRentals\\Controllers\\HomeController.cs",
-              "RelativeToolTip": "FribergCarRentals\\Controllers\\HomeController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-08T14:44:45.201Z",
-              "EditorCaption": ""
+              "DocumentIndex": 13,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\Oscar\\source\\repos\\FribergCarRentals\\FribergCarRentals\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "FribergCarRentals\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\Oscar\\source\\repos\\FribergCarRentals\\FribergCarRentals\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "FribergCarRentals\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEAAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-07T14:24:56.655Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "CarController.cs",
-              "DocumentMoniker": "C:\\Users\\Oscar\\source\\repos\\FribergCarRentals\\FribergCarRentals\\Controllers\\CarController.cs",
-              "RelativeDocumentMoniker": "FribergCarRentals\\Controllers\\CarController.cs",
-              "ToolTip": "C:\\Users\\Oscar\\source\\repos\\FribergCarRentals\\FribergCarRentals\\Controllers\\CarController.cs",
-              "RelativeToolTip": "FribergCarRentals\\Controllers\\CarController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAA7AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-08T14:47:44.722Z",
-              "EditorCaption": ""
+              "DocumentIndex": 7,
+              "Title": "Delete.cshtml",
+              "DocumentMoniker": "C:\\Users\\Oscar\\source\\repos\\FribergCarRentals\\FribergCarRentals\\Views\\Car\\Delete.cshtml",
+              "RelativeDocumentMoniker": "FribergCarRentals\\Views\\Car\\Delete.cshtml",
+              "ToolTip": "C:\\Users\\Oscar\\source\\repos\\FribergCarRentals\\FribergCarRentals\\Views\\Car\\Delete.cshtml",
+              "RelativeToolTip": "FribergCarRentals\\Views\\Car\\Delete.cshtml",
+              "ViewState": "AgIAABgAAAAAAAAAAAAAAD8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-07T13:08:26.804Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "LoginAndBookVM.cs",
-              "DocumentMoniker": "C:\\Users\\Oscar\\source\\repos\\FribergCarRentals\\FribergCarRentals\\ViewModel\\LoginAndBookVM.cs",
-              "RelativeDocumentMoniker": "FribergCarRentals\\ViewModel\\LoginAndBookVM.cs",
-              "ToolTip": "C:\\Users\\Oscar\\source\\repos\\FribergCarRentals\\FribergCarRentals\\ViewModel\\LoginAndBookVM.cs",
-              "RelativeToolTip": "FribergCarRentals\\ViewModel\\LoginAndBookVM.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAApAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-15T01:47:37.558Z",
-              "EditorCaption": ""
+              "DocumentIndex": 14,
+              "Title": "RegisterComplete.cshtml",
+              "DocumentMoniker": "C:\\Users\\Oscar\\source\\repos\\FribergCarRentals\\FribergCarRentals\\Views\\Customer\\RegisterComplete.cshtml",
+              "RelativeDocumentMoniker": "FribergCarRentals\\Views\\Customer\\RegisterComplete.cshtml",
+              "ToolTip": "C:\\Users\\Oscar\\source\\repos\\FribergCarRentals\\FribergCarRentals\\Views\\Customer\\RegisterComplete.cshtml",
+              "RelativeToolTip": "FribergCarRentals\\Views\\Customer\\RegisterComplete.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-07T13:44:07.595Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "UserRoleRepository.cs",
-              "DocumentMoniker": "C:\\Users\\Oscar\\source\\repos\\FribergCarRentals\\FribergCarRentals\\Data\\UserRoleRepository.cs",
-              "RelativeDocumentMoniker": "FribergCarRentals\\Data\\UserRoleRepository.cs",
-              "ToolTip": "C:\\Users\\Oscar\\source\\repos\\FribergCarRentals\\FribergCarRentals\\Data\\UserRoleRepository.cs",
-              "RelativeToolTip": "FribergCarRentals\\Data\\UserRoleRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-15T02:17:44.013Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\Oscar\\source\\repos\\FribergCarRentals\\FribergCarRentals\\Program.cs",
-              "RelativeDocumentMoniker": "FribergCarRentals\\Program.cs",
-              "ToolTip": "C:\\Users\\Oscar\\source\\repos\\FribergCarRentals\\FribergCarRentals\\Program.cs",
-              "RelativeToolTip": "FribergCarRentals\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAABXAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-15T02:19:20.699Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "Customer.cs",
-              "DocumentMoniker": "C:\\Users\\Oscar\\source\\repos\\FribergCarRentals\\FribergCarRentals\\Models\\Customer.cs",
-              "RelativeDocumentMoniker": "FribergCarRentals\\Models\\Customer.cs",
-              "ToolTip": "C:\\Users\\Oscar\\source\\repos\\FribergCarRentals\\FribergCarRentals\\Models\\Customer.cs",
-              "RelativeToolTip": "FribergCarRentals\\Models\\Customer.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAASAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-13T18:52:28.353Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "Inte d\u00F6pt \u00E4n.cs",
-              "DocumentMoniker": "C:\\Users\\Oscar\\source\\repos\\FribergCarRentals\\FribergCarRentals\\Controllers\\Inte d\u00F6pt \u00E4n.cs",
-              "RelativeDocumentMoniker": "FribergCarRentals\\Controllers\\Inte d\u00F6pt \u00E4n.cs",
-              "ToolTip": "C:\\Users\\Oscar\\source\\repos\\FribergCarRentals\\FribergCarRentals\\Controllers\\Inte d\u00F6pt \u00E4n.cs",
-              "RelativeToolTip": "FribergCarRentals\\Controllers\\Inte d\u00F6pt \u00E4n.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAjAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-13T17:47:23.771Z",
-              "EditorCaption": ""
+              "DocumentIndex": 15,
+              "Title": "RegisterBeforeBook.cshtml",
+              "DocumentMoniker": "C:\\Users\\Oscar\\source\\repos\\FribergCarRentals\\FribergCarRentals\\Views\\Customer\\RegisterBeforeBook.cshtml",
+              "RelativeDocumentMoniker": "FribergCarRentals\\Views\\Customer\\RegisterBeforeBook.cshtml",
+              "ToolTip": "C:\\Users\\Oscar\\source\\repos\\FribergCarRentals\\FribergCarRentals\\Views\\Customer\\RegisterBeforeBook.cshtml",
+              "RelativeToolTip": "FribergCarRentals\\Views\\Customer\\RegisterBeforeBook.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACAAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-07T13:36:27.095Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 16,
-              "Title": "UserController.cs",
-              "DocumentMoniker": "C:\\Users\\Oscar\\source\\repos\\FribergCarRentals\\FribergCarRentals\\Controllers\\UserController.cs",
-              "RelativeDocumentMoniker": "FribergCarRentals\\Controllers\\UserController.cs",
-              "ToolTip": "C:\\Users\\Oscar\\source\\repos\\FribergCarRentals\\FribergCarRentals\\Controllers\\UserController.cs",
-              "RelativeToolTip": "FribergCarRentals\\Controllers\\UserController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEIAAAAgAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-13T16:45:23.724Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "ListUserBookings.cshtml",
-              "DocumentMoniker": "C:\\Users\\Oscar\\source\\repos\\FribergCarRentals\\FribergCarRentals\\Views\\Booking\\ListUserBookings.cshtml",
-              "RelativeDocumentMoniker": "FribergCarRentals\\Views\\Booking\\ListUserBookings.cshtml",
-              "ToolTip": "C:\\Users\\Oscar\\source\\repos\\FribergCarRentals\\FribergCarRentals\\Views\\Booking\\ListUserBookings.cshtml",
-              "RelativeToolTip": "FribergCarRentals\\Views\\Booking\\ListUserBookings.cshtml",
-              "ViewState": "AgIAABsAAAAAAAAAAAAAAE4AAAAsAAAAAAAAAA==",
+              "Title": "Login.cshtml",
+              "DocumentMoniker": "C:\\Users\\Oscar\\source\\repos\\FribergCarRentals\\FribergCarRentals\\Views\\Customer\\Login.cshtml",
+              "RelativeDocumentMoniker": "FribergCarRentals\\Views\\Customer\\Login.cshtml",
+              "ToolTip": "C:\\Users\\Oscar\\source\\repos\\FribergCarRentals\\FribergCarRentals\\Views\\Customer\\Login.cshtml",
+              "RelativeToolTip": "FribergCarRentals\\Views\\Customer\\Login.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-01-14T01:49:29.494Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-04T11:27:59.411Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "ApplicationDbContext.cs",
-              "DocumentMoniker": "C:\\Users\\Oscar\\source\\repos\\FribergCarRentals\\FribergCarRentals\\Data\\ApplicationDbContext.cs",
-              "RelativeDocumentMoniker": "FribergCarRentals\\Data\\ApplicationDbContext.cs",
-              "ToolTip": "C:\\Users\\Oscar\\source\\repos\\FribergCarRentals\\FribergCarRentals\\Data\\ApplicationDbContext.cs",
-              "RelativeToolTip": "FribergCarRentals\\Data\\ApplicationDbContext.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAArAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-08T11:29:52.502Z",
-              "EditorCaption": ""
+              "DocumentIndex": 17,
+              "Title": "Delete.cshtml",
+              "DocumentMoniker": "C:\\Users\\Oscar\\source\\repos\\FribergCarRentals\\FribergCarRentals\\Views\\Customer\\Delete.cshtml",
+              "RelativeDocumentMoniker": "FribergCarRentals\\Views\\Customer\\Delete.cshtml",
+              "ToolTip": "C:\\Users\\Oscar\\source\\repos\\FribergCarRentals\\FribergCarRentals\\Views\\Customer\\Delete.cshtml",
+              "RelativeToolTip": "FribergCarRentals\\Views\\Customer\\Delete.cshtml",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAA0AAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-07T13:25:40.315Z"
             }
           ]
         }

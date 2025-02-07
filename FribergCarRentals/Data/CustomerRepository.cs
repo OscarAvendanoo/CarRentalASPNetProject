@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace FribergCarRentals.Data
 {
-    public class CustomerRepository : GenericRepository<Customer>
+    public class CustomerRepository : GenericRepository<Customer>, ICustomerRepository
     {
         private readonly ApplicationDbContext _context;
 
@@ -11,10 +11,10 @@ namespace FribergCarRentals.Data
         {
             _context = applicationDbContext;
         }
-        public Customer GetCustomerByEmail(string email)
+        public async Task<Customer> GetCustomerByEmailAsync(string email)
         {
-            var customer = _context.Customers.Include(u => u.Role).FirstOrDefault(u => u.Email == email);
-            return customer;
+            return await _context.Customers.Include(u => u.Role).FirstOrDefaultAsync(u => u.Email == email);
+            
         }
     }
 }
