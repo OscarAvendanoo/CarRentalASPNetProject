@@ -26,10 +26,7 @@
     <div class="row mt-3">
         @foreach (var item in Model)
         {
-            if (item.IsAvailable == false)
-            {
-                continue;
-            }
+           
             var defaultImage = "https://esquire-shop.co.za/images/noimg.png";
             var imageUrl = (item.carImages != null && item.carImages.Length > 0) ? item.carImages[0] : defaultImage;
             <div class="col-md-3 mb-4">

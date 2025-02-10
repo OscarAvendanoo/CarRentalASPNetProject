@@ -31,10 +31,11 @@ namespace FribergCarRentals
             {
                 options.LoginPath = "/User/Login";
                 options.AccessDeniedPath = "/User/AccessDenied";
+                options.ExpireTimeSpan = TimeSpan.FromMinutes(20);
             });
             var app = builder.Build();
 
-            app.UseAuthentication(); // Must come before UseAuthorization
+            app.UseAuthentication(); 
             app.UseAuthorization();
 
             // Configure the HTTP request pipeline.

@@ -9,7 +9,7 @@
             <h2 class="text-center mb-4">Sign in:</h2>
             <form asp-action="Login" method="post">
                 @Html.AntiForgeryToken() <!-- Anti forgery token -->
-                <!-- Validation Summary -->
+               
                 <div class="text-danger">
                     @Html.ValidationSummary(false, "")
                 </div>
@@ -35,16 +35,16 @@
                         </div>
                     </div>
                     <div class="col d-flex align-items-center justify-content-center">
-                        <a href="#!">Forgot password?</a>
+                        <a href="#!" style="text-decoration: line-through">Forgot password?</a>
                     </div>
                 </div>
 
-                <!-- Submit button -->
+                <!-- Submit knapp-->
                 <div class="d-flex justify-content-center align-items-center">
                     <button type="submit" class="btn btn-primary btn-block mb-3">Sign in</button>
                 </div>
 
-                <!-- Register link -->
+                <!-- Register länk -->
                 <div class="text-center">
                     <p>Not a member? <a asp-action="Register">Register</a></p>
                 </div>

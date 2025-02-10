@@ -24,9 +24,13 @@ namespace FribergCarRentals.Controllers
         public async Task<IActionResult> Index()
         {
             var cars = await _carRepository.GetAllAsync();
-            List<Car> firstEightCars = cars.Take(8).ToList();
+            List<Car> latestEightCars = cars
+                    .Where(car => car.IsAvailable)
+                    .OrderByDescending(car => car.DateAdded)
+                    .Take(8)
+                    .ToList();
 
-            return View(firstEightCars);
+            return View(latestEightCars);
         }
         public IActionResult Privacy()
         {

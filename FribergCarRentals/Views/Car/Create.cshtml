@@ -14,7 +14,7 @@
             <!-- Formulär för att skapa bil-->
             <form asp-action="Create" method="post">
                 @Html.AntiForgeryToken()
-
+                @Html.HiddenFor(model => model.DateAdded)
                 <div class="mb-3">
                     <label class="form-label" for="BrandInput">Brand:</label>
                     @Html.TextBoxFor(model => model.Brand, new { @class = "form-control", id = "BrandInput" })

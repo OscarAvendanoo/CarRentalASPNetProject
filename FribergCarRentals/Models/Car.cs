@@ -20,6 +20,7 @@ namespace FribergCarRentals.Models
         public string Color { get; set; } = string.Empty;
         [Required]
         public int PricePerDay { get; set; }
+        public DateTime DateAdded { get; set; } = DateTime.Now;
         public bool IsAvailable { get; set; }
         public string[]? carImages { get; set; } = new string[]{ };
 
