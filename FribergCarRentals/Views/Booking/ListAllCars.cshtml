@@ -32,7 +32,10 @@
                                 <h5 class="card-title">@item.Brand @item.Model</h5>
                                 <hr>
                                 <p class="card-text d-flex justify-content-between">Year: <span>@item.ModelYear</span></p>
-                                <p class="card-text d-flex justify-content-between">Is Available: <span>@(item.IsAvailable ? "Yes" : "No")</span></p>
+                                @if (User.IsInRole("Admin"))
+                                {
+                                    <p class="card-text d-flex justify-content-between">Is Available: <span>@(item.IsAvailable ? "Yes" : "No")</span></p>
+                                }
                                 <p class="card-text d-flex justify-content-between">Price: <span style="font-weight: bold;">$@item.PricePerDay/day</span></p>
                                 <hr>
                                

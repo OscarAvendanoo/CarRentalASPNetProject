@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("FribergCarRentals")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b8707a0f46931ad6e6a8c14e65aa1c1c132269da")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+93ea5b8f104f66c032e34aecce71e7a05e118fae")]
 [assembly: System.Reflection.AssemblyProductAttribute("FribergCarRentals")]
 [assembly: System.Reflection.AssemblyTitleAttribute("FribergCarRentals")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

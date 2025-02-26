@@ -63,6 +63,10 @@
                     <label class="form-label" for="CarImageInput3">Image URL 4:</label>
                     @Html.TextBoxFor(model => model.carImages[3], new { @class = "form-control", id = "CarImageInput3" })
                 </div>
+                <div class="form-check mt-3">
+                    <input asp-for="IsAvailable" type="checkbox" class="form-check-input" id="IsAvailableCheck" />
+                    <label class="form-check-label" for="IsAvailableCheck">Is Available</label>
+                </div>
 
                 <div class="d-flex flex-column justify-content-center align-items-center mt-3">
                     <button type="submit" class="btn btn-primary btn-block">Create Car</button>

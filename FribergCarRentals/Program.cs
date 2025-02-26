@@ -20,17 +20,20 @@ namespace FribergCarRentals
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();
-            builder.Services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(@"Data Source = (localdb)\MSSQLLocalDB; Initial Catalog = FribergCarRentals; Integrated Security = True; Connect Timeout = 30; Encrypt = False; Trust Server Certificate = False; Application Intent = ReadWrite; Multi Subnet Failover = False"));
+            builder.Services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
             builder.Services.AddTransient<IRepository<Car>, CarRepository>();
             builder.Services.AddTransient<IRepository<UserRole>, UserRoleRepository>();
             builder.Services.AddTransient<ICustomerRepository,CustomerRepository>();
             builder.Services.AddTransient<IBookingRepository,BookingRepository>();
             builder.Services.AddTransient<IAdminRepository, AdminRepository>();
+
+            //lägger till authenticering som en service och väljer cookie som authenticeringssätt
  
             builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme).AddCookie(CookieAuthenticationDefaults.AuthenticationScheme, options =>
             {
-                options.LoginPath = "/User/Login";
-                options.AccessDeniedPath = "/User/AccessDenied";
+                //options.LoginPath = "/User/Login";
+                //options.AccessDeniedPath = "/User/AccessDenied";
+
                 options.ExpireTimeSpan = TimeSpan.FromMinutes(20);
             });
             var app = builder.Build();

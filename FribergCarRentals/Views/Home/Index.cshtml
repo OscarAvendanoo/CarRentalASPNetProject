@@ -9,7 +9,7 @@
         <div class="col image-container">
             <img src="~/images/skoda.jpg" class="image-container-img" style="width: 100%; height: 100%; object-fit: cover;">
             <img src="~/images/companyLogo.png" class="logo-image" />
-            <div class="overlay-text-homepage">Scoda Elroq is now available</div>
+            <div class="overlay-text-homepage text-center">Scoda Elroq is now available</div>
             <div class="overlay-rentNowButton-homepage" style="width: 20em;">
                 <form asp-controller="Customer" asp-action="LoginOrRegisterBeforeBooking" method="get">
                     <input type="hidden" name="carId" value="2003" />
@@ -36,7 +36,10 @@
                         <h5 class="card-title">@item.Brand @item.Model</h5>
                         <hr>
                         <p class="card-text d-flex justify-content-between">Year: <span>@item.ModelYear</span></p>
-                        <p class="card-text d-flex justify-content-between">Is Available: <span>@(item.IsAvailable ? "Yes" : "No")</span></p>
+                        @if (User.IsInRole("Admin"))
+                        {
+                            <p class="card-text d-flex justify-content-between">Is Available: <span>@(item.IsAvailable ? "Yes" : "No")</span></p>
+                        }
                         <p class="card-text d-flex justify-content-between">Price: <span style="font-weight: bold;">$@item.PricePerDay/day</span></p>
                         <hr>
                         <form asp-controller="Customer" asp-action="LoginOrRegisterBeforeBooking" method="get">

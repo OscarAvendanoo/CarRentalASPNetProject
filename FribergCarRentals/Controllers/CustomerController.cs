@@ -131,6 +131,7 @@ namespace FribergCarRentals.Controllers
         {
            
             var car = await _carRepository.GetByIDAsync(carId);
+
             if (car == null)
             {
                 return NotFound();
